@@ -243,6 +243,7 @@ a{
 /* Promoção Section */
 .promo-section {
     background-color: #fff;
+    margin-top: 30px;
     padding: 40px;
     text-align: center;
     border-top: 3px solid #00cc00;
