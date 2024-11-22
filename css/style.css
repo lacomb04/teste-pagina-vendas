@@ -12,6 +12,8 @@ body {
     color: rgb(0, 0, 0);
     margin: 0;
 }
+
+
 header{
     color: #fff;
     background: #000;
@@ -102,7 +104,43 @@ a{
 }
 
 
-
+/* Garantir que o swiper-wrapper tenha a largura total e o alinhamento de itens */
+.imagens-destaque .swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que o carrossel ocupe toda a altura da tela */
+  }
+  
+  /* Alinhar a imagem e o texto no centro de cada slide */
+  .imagens-destaque .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  /* Ajustar para a imagem */
+  .imagens-destaque .imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+  }
+  
+  /* Ajuste para a imagem */
+  .imagens-destaque .imagem {
+    width: 80%; /* Ou qualquer outro valor para controlar a largura da imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
 
 /*Imagens*/
 
