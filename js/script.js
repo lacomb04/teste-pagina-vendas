@@ -1,25 +1,38 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.imagens-destaque', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+    });
+});
 
 const swiper = new Swiper('.imagens-destaque', {
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+        el: '.swiper-pagination',
+        clickable: true,
     },
     autoplay: {
-      delay: 6000, // Troca automática a cada 6 segundos
+        delay: 3000,
+        disableOnInteraction: false,
     },
-    slidesPerView: 1, // Exibe um slide por vez em telas pequenas
-    spaceBetween: 20, // Espaçamento entre slides
-    breakpoints: {
-      768: {
-        slidesPerView: 2, // Dois slides em telas médias
-      },
-      1024: {
-        slidesPerView: 3, // Três slides em telas grandes
-      },
-    },
-  });
+    slidesPerView: 1,
+    spaceBetween: 0,
+});
+
+
