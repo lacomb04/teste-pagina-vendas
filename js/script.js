@@ -10,7 +10,7 @@ const swiper = new Swiper('.imagens-destaque', {
       clickable: true,
     },
     autoplay: {
-      delay: 3000, // Troca automática a cada 3 segundos
+      delay: 6000, // Troca automática a cada 6 segundos
     },
     slidesPerView: 1, // Exibe um slide por vez em telas pequenas
     spaceBetween: 20, // Espaçamento entre slides
