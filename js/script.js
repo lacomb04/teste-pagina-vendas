@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
         autoplay: {
-            delay: 3000,
+            delay: 20000,
         },
         slidesPerView: 1,
         spaceBetween: 0,
