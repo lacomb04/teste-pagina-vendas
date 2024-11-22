@@ -174,6 +174,126 @@ a{
     color: #555;
 }
 
+
+/*intro */
+
+.ebook-intro {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid #00cc00;
+    border-bottom: 3px solid #00cc00;
+}
+.ebook-intro .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.ebook-intro h2 {
+    color: #00cc00;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.ebook-intro p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+.ebook-intro ul {
+    text-align: left;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+    max-width: 600px;
+}
+.ebook-intro ul li {
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+.ebook-intro ul li::before {
+    content: "✔";
+    color: #00cc00;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+.cta-section {
+    margin-top: 30px;
+}
+.btn-acessar {
+    display: inline-block;
+    background-color: #00cc00;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-acessar:hover {
+    background-color: #00FF00;
+}
+
+/* Promoção Section */
+.promo-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-top: 3px solid #00cc00;
+  }
+  
+  .promo-section h2 {
+    color: #00cc00;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .promo-section p {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .promo-section .original-price {
+    text-decoration: line-through;
+    color: #FF0000;
+  }
+  
+  .promo-section .promo-price {
+    color: #00cc00;
+    font-weight: bold;
+  }
+  
+  .promo-section .promo-description {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .promo-section .promo-button {
+    background-color: #00FF00;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .promo-section .promo-button:hover {
+    background-color: #2ECC10;
+  }
+  
+
 /* Estilo responsivo para o banner */
 @media (max-width: 768px) {
     .banner {
