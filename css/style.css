@@ -279,7 +279,7 @@ a{
   }
   
   .promo-section .promo-button {
-    background-color: #00FF00;
+    background-color: #00cc00;
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
@@ -291,7 +291,7 @@ a{
   }
   
   .promo-section .promo-button:hover {
-    background-color: #2ECC10;
+    background-color: #00FF00;
   }
   
 
