@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.imagens-destaque', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 10000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+    });
+});
 
 const swiper = new Swiper('.imagens-destaque', {
     loop: true,
@@ -10,7 +28,7 @@ const swiper = new Swiper('.imagens-destaque', {
         clickable: true,
     },
     autoplay: {
-        delay: 30000,
+        delay: 3000,
         disableOnInteraction: false,
     },
     slidesPerView: 1,
