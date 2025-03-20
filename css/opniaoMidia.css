@@ -1,7 +1,7 @@
 .opniaoMidia {
   display: flex;
   flex-direction: column;
-
+  padding: 10px;
   text-align: center;
 }
 .opniaoMidia h2 {
