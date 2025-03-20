@@ -1,226 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emagreça em casa - Detox</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<html>
+  <head>
+    <title>Desafio Detox Personalizado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klein:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
-    <header>
-       <p>DESCUBRA COMO UMA MÃE SEDENTÁRIA <strong> PERDEU 3,4KG EM 7 DIAS</strong>  APLICANDO UM MÉTODO <strong>SIMPLES E FÁCIL</strong></p>
-    </header>
-    <main>
-        <!-- Ícone do WhatsApp com mensagem fixa -->
-<a href="https://wa.me/5537999094954" target="_blank" class="whatsapp-container">
-    <div class="whatsapp-icon">
-        <i class="fab fa-whatsapp"></i>
+    <link rel="stylesheet" type="text/css" href="css/pressel/style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Descubra Seu Plano Detox Ideal</h1>
+      <div id="pergunta"></div>
+      <div id="opcoes"></div>
+      <button id="proximo" class="botao-proximo">Próximo</button>
+      <div id="resultado" style="display: none">
+        <h2>Seu Plano Detox Personalizado</h2>
+        <p id="mensagem-resultado"></p>
+        <a href="paginaVenda.html" class="botao-venda"
+          >Acessar Meu Plano Detox</a
+        >
+      </div>
     </div>
-    <div class="whatsapp-text">
-        <span>Tire suas Dúvidas</span>
-    </div>
-</a>
-
-        <section class="banner">    
-        <img src="img/bannerPrincipal.jpg" alt="Banner Detox Fit"  class="banner-img">
-        <img src="img/descktop.jpg" alt="Banner Detox Fit"  class="banner-img-desck">
-        <a href="https://pay.kiwify.com.br/I3Ma59C" target="_blank" class="cta-button"> Transforme seu corpo agora</a>
-      
-
-        </section>
-        <section class="ebook-intro">
-            <div class="container">
-                <!-- Título Impactante -->
-                <h2>Cansado de Dietas que Não Funcionam? Transforme Sua Vida Agora!</h2>
-        
-                <!-- Texto Persuasivo -->
-                <p>
-                    Você já tentou de tudo para emagrecer, mas sempre acaba desistindo no meio do caminho? 
-                    Se sente frustrado com dietas complicadas, alimentos caros ou falta de resultados? Este 
-                    <strong>eBook foi criado para você!</strong>
-                </p>
-                <ul>
-                    <li><strong>Eliminar toxinas</strong> e dar um "reset" no seu organismo.</li>
-                    <li><strong>Reduzir inchaço</strong> e acelerar o metabolismo.</li>
-                    <li>Descobrir <strong>receitas acessíveis</strong> e deliciosas que funcionam no dia a dia.</li>
-                    <li>Criar uma <strong>relação saudável com a comida</strong>, sem sofrimentos!</li>
-                </ul>
-                <p>
-                    Não é mais uma dieta da moda, é uma solução prática para transformar sua alimentação 
-                    e conquistar o corpo e a saúde que você merece!
-                </p>
-                <p>
-                    <strong>Dúvidas?</strong> Não precisa ser chef de cozinha, não exige alimentos difíceis de encontrar 
-                    e você pode começar <strong>hoje mesmo!</strong>
-                </p>
-        
-                <!-- Botão -->
-                <div class="cta-section">
-                    <a href="https://pay.kiwify.com.br/I3Ma59C" class="btn-acessar">Acesse o Conteúdo Agora</a>
-                </div>
-            </div>
-        </section>
-        
-        <div class="content">
-            <h2>
-                CONFIRA TUDO O QUE VAI APRENDER NESTE DESAFIO
-            </h2>
-            <div class="itens-desafio">
-                <div class="item">
-                    <i class="fas fa-leaf"></i>
-                    <span>Transforme sua alimentação e alcance seus objetivos com praticidade!</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-recycle"></i>
-                    <span>Elimine toxinas, reduza o inchaço e acelere o metabolismo!</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-blender"></i>
-                    <span>Aprenda combinações deliciosas para desintoxicar e energizar!</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-utensil-spoon"></i>
-                    <span>Receitas perfeitas para saciar e manter o foco nos seus objetivos!</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-carrot"></i>
-                    <span>Lanches rápidos, deliciosos e ideais para controlar a fome!</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-gift"></i>
-                    <span>Lista de compras e dicas extras para economizar tempo e dinheiro!</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="swiper imagens-destaque">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide">
-                <div class="imagem">
-                  <img src="img/emagrecer.jpeg" alt="Transformação Garantida">
-                  <h3>Transformação Garantida</h3>
-                  <p>Veja como você pode alcançar resultados incríveis com este desafio!</p>
-                </div>
-              </div>
-          
-              <!-- Slide 2 -->
-              <div class="swiper-slide">
-                <div class="imagem">
-                  <img src="img/prova.jpeg" alt="Depoimentos Reais">
-                  <h3>Depoimentos Reais</h3>
-                  <p>Conheça histórias de quem já transformou a vida com nosso método.</p>
-                </div>
-              </div>
-          
-              <!-- Slide 3 -->
-              <div class="swiper-slide">
-                <div class="imagem">
-                  <img src="img/time.png" alt="Oferta Limitada">
-                  <h3>Oferta Limitada</h3>
-                  <p>Aproveite essa oportunidade única antes que acabe!</p>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Controles do Carrossel -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-          
-
-        <div class="cards-incentivo">
-            <!-- Card 1: Benefício Exclusivo -->
-           
-                <div class="card">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Transformação Garantida</h3>
-                    <p>Receba um guia completo com estratégias comprovadas para alcançar seus objetivos!</p>
-                </div>
-          
-            
-        
-            <!-- Card 2: Depoimentos -->
-          
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <h3>Depoimentos Reais</h3>
-                    <p>"Depois desse desafio, mudei minha alimentação e alcancei resultados incríveis!" - Ana P.</p>
-                </div>
-          
-            
-        
-            <!-- Card 3: Oferta Limitada -->
-           
-                <div class="card">
-                    <i class="fas fa-hourglass-half"></i>
-                    <h3>Oferta por Tempo Limitado</h3>
-                    <p>Compre agora e ganhe um bônus exclusivo para economizar ainda mais na sua jornada!</p>
-                </div>
-        
-            
-        </div>
-        <section class="promo-section">
-            <h2>Oferta Exclusiva: Transforme Seu Corpo Agora!</h2>
-            <div class="imagem-ebook">
-                <img src="img/EBOOK completo.png" alt="Oferta Limitada">
-              </div>
-            <p>
-              De <span class="original-price">R$69,90</span> por apenas 
-              <span class="promo-price">R$35,90!</span>
-            </p>
-            <p class="promo-description">
-              Aproveite esta oferta por tempo limitado e comece sua transformação ainda hoje!
-            </p>
-            <a href="https://pay.kiwify.com.br/I3Ma59C" target="_blank"><button  class="promo-button">Comprar Agora</button></a>
-          </section>
-
-          <section class="faq">
-            <h2>Dúvidas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">O que é o ebook?</button>
-                    <div class="faq-answer">
-                        <p>O ebook oferece uma abordagem completa para emagrecimento, com dicas práticas e orientações baseadas em pesquisa científica.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Como posso adquirir o ebook?</button>
-                    <div class="faq-answer">
-                        <p>Você pode adquirir o ebook diretamente no nosso site através do botão de compra disponível na página inicial.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O ebook é para iniciantes ou pessoas mais avançadas?</button>
-                    <div class="faq-answer">
-                        <p>O ebook foi desenvolvido tanto para iniciantes quanto para pessoas com experiência, pois oferece dicas para todas as fases do processo de emagrecimento.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Como posso fazer o download do ebook após a compra?</button>
-                    <div class="faq-answer">
-                        <p>Após a compra, você receberá um link de download diretamente no seu e-mail cadastrado.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Posso pedir reembolso caso não goste do ebook?</button>
-                    <div class="faq-answer">
-                        <p>Sim! Se você não estiver satisfeito com o ebook, pode solicitar o reembolso dentro de 7 dias após a compra.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-          
-        
-    </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    
-</body>
+    <script src="js/pressel/script.js"></script>
+  </body>
 </html>
