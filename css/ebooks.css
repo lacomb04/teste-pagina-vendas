@@ -58,6 +58,18 @@
 .btn:hover {
   background-color: #5a54e0;
 }
+.formas-pagamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  color: #333;
+}
+.formas-pagamento img {
+  margin-top: 20px;
+  width: 300px;
+}
 
 @media (max-width: 600px) {
   .cardVenda {
