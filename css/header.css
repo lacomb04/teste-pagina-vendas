@@ -81,11 +81,6 @@ header {
   background-color: #128c7e;
 }
 
-/* Ícone do WhatsApp */
-.whatsapp-icon {
-  font-size: 30px;
-}
-
 /* Estilo do texto da mensagem */
 .whatsapp-text {
   font-size: 1rem;
