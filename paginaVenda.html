@@ -3,33 +3,76 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Meta Viewport para responsividade -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Pré-conexões para otimização -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Carregamento otimizado das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Klein:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
+
+    <!-- Font Awesome de maneira otimizada -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      media="print"
+      onload="this.onload=null;this.media='all';"
     />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="css/min.css" />
+
+    <!-- Reset CSS e estilos principais -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/desafioDetox.css" />
+    <link rel="stylesheet" href="css/ebookIntro.css" />
+    <link rel="stylesheet" href="css/ebooks.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/opniaoMidia.css" />
+    <link rel="stylesheet" href="css/secaoDetox.css" />
+    <link rel="stylesheet" href="css/testimontial.css" />
+
+    <!-- Estilos Inline (em vez de adicionar uma folha separada) -->
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      p {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+
+    <!-- Título da página -->
     <title>Detox fit</title>
   </head>
+
   <body>
     <header>
       <img src="img/logo.svg" alt="Imagem da logo site" class="logo" />
       <div class="container_banner">
         <img
-          src="img/bannerPrincipal.jpg"
+          src="img/bannerPrincipal.webp"
           alt="imagem banner principal corpo de mulheres"
           class="bannerPrincipal"
         />
@@ -52,9 +95,6 @@
         <div class="whatsapp-icon">
           <i class="fab fa-whatsapp"></i>
         </div>
-        <div class="whatsapp-text">
-          <span>Tire suas Dúvidas</span>
-        </div>
       </a>
       <section class="testimonial-section">
         <h2>
@@ -63,7 +103,7 @@
         </h2>
         <div class="testimonial-container">
           <div class="testimonial">
-            <img src="img/Antes e depois.jpg" alt="Antes e depois aluna 1" />
+            <img src="img/Antes-e-depois.webp" alt="Antes e depois aluna 1" />
             <p>
               <strong>Marina S., 38 anos - Rio de Janeiro</strong> perdeu 4,2kg
               em 7 dias com nosso método detox!
@@ -71,7 +111,7 @@
           </div>
           <div class="testimonial">
             <img
-              src="img/Emagrecimento aluna.jpg"
+              src="img/Emagrecimento-aluna.webp"
               alt="Antes e depois aluna 2"
             />
             <p>
@@ -83,7 +123,7 @@
 
         <div class="testimonial-reviews">
           <div class="review">
-            <img src="img/transferir.jpg" alt="Perfil Maria" />
+            <img src="img/transferir.webp" alt="Perfil Maria" />
             <div class="review-content">
               <p><strong>Marina S., 38 anos - Rio de Janeiro</strong></p>
               <p>
@@ -102,7 +142,7 @@
             </div>
           </div>
           <div class="review">
-            <img src="img/perfil2.jpg" alt="Perfil Ana" />
+            <img src="img/perfil2.webp" alt="Perfil Ana" />
             <div class="review-content">
               <p><strong>Catarina L., 29 anos - Recife</strong></p>
               <p>
@@ -224,7 +264,7 @@
         </div>
         <div class="formas-pagamento">
           <h3>Formas de pagamento</h3>
-          <img src="img/formas_pagamento.png" alt="formas de pagamento" />
+          <img src="img/formas_pagamento.webp" alt="formas de pagamento" />
         </div>
       </section>
 
@@ -234,7 +274,7 @@
           <div class="cards">
             <div class="card card-laranja">
               <div class="card-icon">
-                <img src="img/icon card1.png" alt="Transforme Seu Corpo" />
+                <img src="img/icon card1.webp" alt="Transforme Seu Corpo" />
               </div>
               <h3>Perda de Peso Média 3-5Kg em 7 Dias</h3>
               <p>
@@ -246,7 +286,7 @@
             </div>
             <div class="card card-azul">
               <div class="card-icon">
-                <img src="img/icon card2.png" alt="Detox e Metabolismo" />
+                <img src="img/icon card2.webp" alt="Detox e Metabolismo" />
               </div>
               <h3>Redução de Medidas 8cm</h3>
               <p>
@@ -260,7 +300,7 @@
             </div>
             <div class="card card-rosa">
               <div class="card-icon">
-                <img src="img/icon card3.png" alt="Receitas Saborosas" />
+                <img src="img/icon card3.webp" alt="Receitas Saborosas" />
               </div>
               <h3>Taxa de Conclusão 90%</h3>
               <p>
@@ -273,7 +313,7 @@
             </div>
             <div class="card card-azul-claro">
               <div class="card-icon">
-                <img src="img/icon card4.png" alt="Lanches Inteligentes" />
+                <img src="img/icon card4.webp" alt="Lanches Inteligentes" />
               </div>
               <h3>Melhora da Energia 78%</h3>
               <p>
@@ -291,53 +331,75 @@
         <div class="container">
           <!-- Título Impactante -->
           <h2>
-            Cansado de Dietas que Não Funcionam? Transforme Sua Vida Agora!
+            <i class="fa-solid fa-bolt"></i> Cansado de Dietas que Não
+            Funcionam? Transforme Sua Vida Agora!
           </h2>
 
           <!-- Texto Persuasivo -->
           <p>
-            Você já tentou de tudo para emagrecer, mas sempre acaba desistindo
-            no meio do caminho? Se sente frustrado com dietas complicadas,
-            alimentos caros ou falta de resultados? Este
-            <strong>eBook foi criado para você!</strong>
+            <i class="fa-solid fa-circle-exclamation"></i> Você já tentou de
+            tudo para emagrecer, mas sempre acaba desistindo no meio do caminho?
+            Se sente frustrado com dietas complicadas, alimentos caros ou falta
+            de resultados? Este <strong>eBook foi criado para você!</strong>
           </p>
+
+          <!-- Lista de Benefícios -->
           <ul>
             <li>
-              <strong>Eliminar toxinas</strong> e dar um "reset" no seu
-              organismo.
-            </li>
-            <li><strong>Reduzir inchaço</strong> e acelerar o metabolismo.</li>
-            <li>
-              Descobrir <strong>receitas acessíveis</strong> e deliciosas que
-              funcionam no dia a dia.
+              <i class="fa-solid fa-leaf"></i>
+              <span
+                ><strong>Eliminar toxinas</strong> e dar um "reset" no seu
+                organismo.</span
+              >
             </li>
             <li>
-              Criar uma <strong>relação saudável com a comida</strong>, sem
-              sofrimentos!
+              <i class="fa-solid fa-fire"></i>
+              <span
+                ><strong>Reduzir inchaço</strong> e acelerar o
+                metabolismo.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-utensils"></i>
+              <span
+                >Descobrir <strong>receitas acessíveis</strong> e deliciosas que
+                funcionam no dia a dia.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span
+                >Criar uma <strong>relação saudável com a comida</strong>, sem
+                sofrimentos!</span
+              >
             </li>
           </ul>
+
           <p>
-            Não é mais uma dieta da moda, é uma solução prática para transformar
-            sua alimentação e conquistar o corpo e a saúde que você merece!
+            <i class="fa-solid fa-circle-check"></i> Não é mais uma dieta da
+            moda, é uma solução prática para transformar sua alimentação e
+            conquistar o corpo e a saúde que você merece!
           </p>
           <p>
+            <i class="fa-solid fa-question-circle"></i>
             <strong>Dúvidas?</strong> Não precisa ser chef de cozinha, não exige
             alimentos difíceis de encontrar e você pode começar
             <strong>hoje mesmo!</strong>
           </p>
 
-          <!-- Botão -->
+          <!-- Botão  -->
           <div class="cta-section">
-            <a href="#ebboksSection" class="btn-acessar"
-              >ACESSE O CONTEÚDO AGORA</a
-            >
+            <a href="#ebboksSection" class="btn-acessar">
+              EU QUERO EMAGRECER
+            </a>
           </div>
         </div>
       </section>
+
       <section class="secao-detox">
         <div class="container">
           <div class="imagem-detox">
-            <img src="img/imagem detox1.png" alt="Descubra o poder do detox" />
+            <img src="img/imagem detox1.webp" alt="Descubra o poder do detox" />
           </div>
           <div class="conteudo-detox">
             <h2>Descubra o poder do detox</h2>
@@ -456,7 +518,7 @@
         </div>
         <div class="formas-pagamento">
           <h3>Formas de pagamento</h3>
-          <img src="img/formas_pagamento.png" alt="formas de pagamento" />
+          <img src="img/formas_pagamento.webp" alt="formas de pagamento" />
         </div>
       </section>
 
@@ -465,27 +527,27 @@
         <p>Os maiores veículos de mídia comprovam a eficácia do Detox</p>
         <div class="content-midias">
           <div class="midia">
-            <img src="img/midia01.png" alt="G1 logo" />
+            <img src="img/midia01.webp" alt="G1 logo" />
             <p>
               "Especialistas dizem: o detox pode transformar sua saúde e
               autoestima."
             </p>
           </div>
           <div class="midia">
-            <img src="img/midia02.png" alt="G1 logo" />
+            <img src="img/midia02.webp" alt="G1 logo" />
             <p>
               "Nutricionistas garantem: o detox elimina toxinas e melhora o
               corpo."
             </p>
           </div>
           <div class="midia">
-            <img src="img/midia03.png" alt="G1 logo" />
+            <img src="img/midia03.webp" alt="G1 logo" />
             <p>
               "Detox não é só suco verde, especialistas mostram que vai além."
             </p>
           </div>
           <div class="midia">
-            <img src="img/midia04.png" alt="G1 logo" />
+            <img src="img/midia04.webp" alt="G1 logo" />
             <p>
               "Estudos indicam: detox acelera o metabolismo e ajuda a
               emagrecer."
@@ -572,8 +634,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/faq.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/hoverMobile.js"></script>
+    <script src="js/faq.js?v=2.1"></script>
+    <script src="js/scroll.js?v=2.1"></script>
   </body>
 </html>

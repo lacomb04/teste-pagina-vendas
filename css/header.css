@@ -7,8 +7,7 @@ header {
   width: 100%;
 }
 .textoBanner {
-  font-family: "Klein", sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   font-stretch: expanded;
   width: 50vw;
   position: absolute;
@@ -44,7 +43,6 @@ header {
   top: 80%;
   left: 50%;
   background-color: #d0e8a7;
-  font-family: "Inter", sans-serif;
   border: 2px solid #2b2b2b;
   border-radius: 10px;
   padding: 15px 30px;
@@ -86,7 +84,6 @@ header {
 /* Ícone do WhatsApp */
 .whatsapp-icon {
   font-size: 30px;
-  margin-right: 10px; /* Espaço entre o ícone e o texto */
 }
 
 /* Estilo do texto da mensagem */
@@ -119,7 +116,6 @@ header {
     height: 100dvh;
   }
   .textoBanner {
-    font-size: 1.5rem;
     top: 50%;
   }
   .buttomBanner {

@@ -10,9 +10,7 @@
 }
 
 .desafio-detox h2 {
-  font-family: "Klein", sans-serif;
-  font-weight: 800;
-  font-size: 2.5em;
+  font-weight: 900;
   margin-bottom: 30px;
   color: #333;
 }
@@ -26,8 +24,6 @@
 .desafio-detox .card {
   width: 250px;
   height: 400px;
-  font-family: "Inter", sans-serif;
-  margin: 20px;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -41,7 +37,6 @@
 }
 
 .desafio-detox .card h3 {
-  font-family: "klein", sans-serif;
   font-size: 1.5em;
   margin-bottom: 15px;
   color: #333;
