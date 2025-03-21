@@ -4,7 +4,7 @@
   justify-content: center;
   margin: 0 auto;
   gap: 20px;
-  padding: 40px;
+  padding: 10px;
   background-color: #f9f9f9;
 }
 .cardVenda {
@@ -72,7 +72,7 @@
 
 @media (max-width: 600px) {
   .cardVenda {
-    max-width: 95vh;
-    width: 95vh;
+    max-width: 100vh;
+    width: 90vh;
   }
 }
