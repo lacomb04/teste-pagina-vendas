@@ -38,3 +38,8 @@
     padding: 10px;
 }
 
+@media (max-width: 600px){
+    .bg-logo--cnn h2{
+        font-size: 0.87em;
+    }
+}
