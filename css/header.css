@@ -39,26 +39,37 @@ header {
 }
 
 .buttomBanner {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  background-color: #d0e8a7;
+  
+ 
   border: 2px solid #2b2b2b;
-  border-radius: 10px;
-  padding: 15px 30px;
-  font-size: 18px;
+  
+  
+  
   color: #333;
   cursor: pointer;
+  
+ 
+  
+  
+}
+
+.banner-subtitulo{
+  position: absolute;
+  width: 80%;
+  border-radius: 10px;
+  color: #000000;
+  padding: 15px 30px;
+  background-color: #ffffff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  top: 80%;
+  left:50%;
+  font-size: 18px;
   transition: background-color 0.3s ease, transform 0.5s ease; /* Adicionada transição para transform */
   transform: translateY(20px); /* Inicialmente movido 20px para baixo */
   opacity: 0; /* Inicialmente invisível */
   animation: fadeInMoveUp 0.8s ease-out forwards; /* Adicionada animação */
 }
 
-.buttomBanner:hover {
-  background-color: #acc588; /* Cor de fundo mais escura ao passar o mouse */
-}
 
 /* Whats */
 .whatsapp-container {
@@ -113,7 +124,7 @@ header {
   .textoBanner {
     top: 50%;
   }
-  .buttomBanner {
+  .banner-subtitulo {
     font-size: 12px;
   }
 }
