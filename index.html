@@ -1,43 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <script>
-      (function () {
-        var script = document.createElement("script");
-        script.src = "https://speed-insights.vercel.app/script.js";
-        script.defer = true;
-        document.head.appendChild(script);
-      })();
-    </script>
-
-    <title>Desafio Detox Personalizado</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <title>DETOX FIT - Descubra Seu Nível de Toxinas</title>
 
-    <link rel="stylesheet" type="text/css" href="css/pressel/style.css?v=2.1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Descubra seu nível de toxinas com nosso quiz científico e transforme sua saúde em 21 dias"
+    />
+    <meta
+      property="og:title"
+      content="DETOX FIT - Quiz de Avaliação de Toxinas"
+    />
+    <meta
+      property="og:description"
+      content="Quiz científico para descobrir seu nível de toxinas e começar sua transformação"
+    />
   </head>
   <body>
-    <div class="quiz-container">
-      <h1>Descubra Seu Plano Detox Ideal</h1>
-      <div id="pergunta"></div>
-      <div id="opcoes"></div>
-      <button id="proximo" class="botao-proximo">Próximo</button>
-      <div id="resultado" style="display: none">
-        <h2>Seu Plano Detox Personalizado</h2>
-        <p id="mensagem-resultado"></p>
-        <a href="paginaVenda.html" class="botao-venda"
-          >Acessar Meu Plano Detox</a
-        >
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-section">
+      <div class="hero-background"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="logo-container">
+            <img
+              src="https://pplx-res.cloudinary.com/image/upload/v1748873516/gpt4o_images/cg98h15sx5wxbhg2bwgr.png"
+              alt="DETOX FIT Logo"
+              class="main-logo"
+              width="200"
+              height="80"
+            />
+          </div>
+
+          <h1 class="hero-title">
+            Descubra Seu Nível de <span class="highlight">Toxinas</span> e
+            Transforme Sua Saúde
+          </h1>
+
+          <p class="hero-subtitle">
+            Quiz científico de 7 perguntas para avaliar como as toxinas estão
+            impactando sua energia, digestão e bem-estar geral.
+          </p>
+
+          <div class="credibility-stats">
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Taxa de Sucesso</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">15.000+</span>
+              <span class="stat-label">Vidas Transformadas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">7 Dias</span>
+              <span class="stat-label">Para Resultados</span>
+            </div>
+          </div>
+
+          <button
+            id="start-quiz-btn"
+            class="btn btn--primary btn--hero"
+            aria-label="Iniciar quiz de avaliação"
+          >
+            <span>Iniciar Quiz Gratuito</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+
+          <p class="disclaimer">
+            ✓ Gratuito • ✓ Resultado Imediato • ✓ Baseado em Ciência
+          </p>
+        </div>
       </div>
-    </div>
-    <script src="js/pressel/script.js?v=2.1"></script>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="quiz-section hidden" aria-live="polite">
+      <div class="container">
+        <div class="quiz-container">
+          <!-- Progress Bar -->
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <div class="progress-info">
+              <span id="progress-text" class="progress-text"
+                >Pergunta 1 de 7</span
+              >
+              <span class="progress-percentage">14%</span>
+            </div>
+          </div>
+
+          <!-- Question Card -->
+          <div id="question-card" class="question-card">
+            <div class="question-header">
+              <h2 id="question-title" class="question-title" tabindex="-1"></h2>
+            </div>
+
+            <div
+              id="question-options"
+              class="question-options"
+              role="radiogroup"
+            ></div>
+
+            <div class="question-navigation">
+              <button
+                id="prev-btn"
+                class="btn btn--secondary hidden"
+                aria-label="Pergunta anterior"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+                Anterior
+              </button>
+              <button
+                id="next-btn"
+                class="btn btn--primary hidden"
+                aria-label="Próxima pergunta"
+              >
+                Próxima
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="result-section" class="result-section hidden">
+      <div class="container">
+        <div class="result-container">
+          <!-- Result Card -->
+          <div class="result-card">
+            <div class="result-icon">
+              <div id="result-emoji" class="result-emoji"></div>
+            </div>
+            <h2 id="result-title" class="result-title"></h2>
+            <p id="result-description" class="result-description"></p>
+            <p id="result-recommendation" class="result-recommendation"></p>
+          </div>
+
+          <!-- Ebook Offer -->
+          <div class="offer-card">
+            <div class="offer-badge">
+              <span>OFERTA EXCLUSIVA</span>
+            </div>
+
+            <div class="offer-header">
+              <div class="offer-image">
+                <img
+                  src="https://pplx-res.cloudinary.com/image/upload/v1748873457/pplx_project_search_images/92e08f9c486841a6a76b0a67c38fc87054f2e260.jpg"
+                  alt="Suco verde detox"
+                  class="juice-image"
+                  width="100"
+                  height="100"
+                />
+              </div>
+              <h3 class="offer-title">
+                Ebook Detox Fit: Transformação em 21 Dias
+              </h3>
+              <div class="offer-price">
+                <span class="original-price">De R$ 119,90</span>
+                <span class="special-price">Por 10x de R$7,02</span>
+                <span class="offer-title">Ou 59,90 á vista </span>
+                <span class="discount-badge">52% OFF</span>
+              </div>
+            </div>
+
+            <div class="offer-benefits">
+              <h4>O que você vai receber:</h4>
+              <ul class="benefits-list">
+                <li>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  Metodo emagreça em 7 dias com Detox
+                </li>
+                <li>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  30+ receitas de sucos e smoothies detox
+                </li>
+                <li>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  Guia de exercícios em casa Simples,para acelerar a eliminação
+                </li>
+                <li>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  Guia de Alimentos Anti-Iflamatórios
+                </li>
+                <li>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  Planner de Refeições para 7 Dias
+                </li>
+              </ul>
+            </div>
+
+            <div class="offer-guarantee">
+              <div class="guarantee-badge">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+                <span>Garantia incondicional de 30 dias</span>
+              </div>
+            </div>
+
+            <a
+              href="https://pay.kiwify.com.br/ShaVqAV"
+              target="_blank"
+              class="btn btn--cta btn--pulse"
+              id="cta-button"
+            >
+              <span>Garantir Meu Ebook Agora</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+
+            <p class="urgency-text">⚡ Oferta por tempo limitado!</p>
+          </div>
+
+          <!-- Testimonials -->
+          <div class="testimonials">
+            <h4 class="testimonials-title">
+              Depoimentos Reais de Transformação
+            </h4>
+            <div class="testimonials-grid">
+              <div class="testimonial-item">
+                <div class="testimonial-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <p class="testimonial-text">
+                  "Perdi 8kg em 21 dias e me sinto renascida! Minha energia
+                  triplicou e nunca me senti tão bem."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Maria Silva</strong>
+                  <span class="testimonial-location">São Paulo, SP</span>
+                </div>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <p class="testimonial-text">
+                  "Minha energia aumentou incrivelmente! Agora consigo trabalhar
+                  e ainda ter disposição para a família."
+                </p>
+                <div class="testimonial-author">
+                  <strong>João Santos</strong>
+                  <span class="testimonial-location">Rio de Janeiro, RJ</span>
+                </div>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <p class="testimonial-text">
+                  "Nunca me senti tão bem na minha vida! O detox mudou
+                  completamente minha qualidade de vida."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Ana Costa</strong>
+                  <span class="testimonial-location">Belo Horizonte, MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
   </body>
 </html>
