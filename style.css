@@ -1303,6 +1303,13 @@ a:hover {
   overflow: hidden;
 }
 
+.option-button.hover-effect {
+  transform: translateY(-2px) scale(1.01);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--color-emerald-500);
+  box-shadow: var(--shadow-lg);
+}
+
 .option-button:hover {
   background: rgba(255, 255, 255, 0.8);
   border-color: var(--color-emerald-500);
