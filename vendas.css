@@ -1,34 +1,110 @@
 /* Estilos específicos para a página vendas.html */
 
-/*
-  As variáveis de :root (cores, fontes, espaçamentos, etc.) e estilos base
-  (body, h1-h6, p, a, .container) são herdados de style.css,
-  que é carregado antes de vendas.css no HTML.
-*/
+:root { /* Reforçando/Sobrescrevendo variáveis para o design 'Apple Clean Detox' */
+    --color-background-page-vendas: #F9FAFB; /* Branco levemente acinzentado */
+    --color-text-primary-vendas: #1F2937; /* Cinza bem escuro (quase preto) */
+    --color-text-secondary-vendas: #4B5563; /* Cinza médio */
+    --color-text-light-vendas: #9CA3AF;    /* Cinza claro para legendas */
+    --color-border-subtle-vendas: #E5E7EB;   /* Borda muito sutil */
+    --color-accent-green-vendas: #059669;  /* Verde Esmeralda 600 (Tailwind) - Moderno */
+    --color-accent-green-hover-vendas: #047857; /* Verde Esmeralda 700 */
+    --color-accent-green-light-bg-vendas: #ECFDF5; /* Fundo verde muito claro (Esmeralda 50) */
+    --color-surface-vendas: #FFFFFF; /* Superfície de cards */
 
-body.pagina-vendas { /* Adicionar classe ao body em vendas.html se quiser escopo ainda mais específico */
-    background-color: var(--color-slate-50, #f8fafc); /* Um fundo ligeiramente diferente para a página de vendas */
+    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    /* Espaçamentos (baseados em Tailwind, convertidos para rem, 1rem = 16px) */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.5rem;  /* 8px */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-xl: 1rem;   /* 16px */
+    --radius-full: 9999px;
+
+    /* Shadows (sutis) */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    background-color: var(--color-background-page-vendas);
+    color: var(--color-text-primary-vendas);
+    font-family: var(--font-family-sans);
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .vendas-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 860px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 var(--space-6); /* Equivalente a px-24 (3rem * 2) */
+    padding: 0 var(--spacing-5);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 900px) {
     .vendas-container {
-        padding: 0 var(--space-5); /* Equivalente a px-20 (2.5rem * 2) */
+        padding: 0 var(--spacing-4);
     }
 }
 
-@media (max-width: 768px) {
-    .vendas-container {
-        padding: 0 var(--space-4); /* Equivalente a px-16 (2rem * 2) */
-    }
+/* Estilos para Ícones SVG */
+.checklist-icon,
+.beneficio-icon {
+    width: var(--spacing-5); /* 1.25rem / 20px */
+    height: var(--spacing-5);
+    color: var(--color-accent-green-vendas);
+    margin-right: var(--spacing-3); /* Espaçamento à direita do ícone */
+    flex-shrink: 0; /* Para não encolher se o texto for longo */
+    margin-top: 0.15em; /* Ajuste fino de alinhamento vertical */
 }
+
+/* Se quisermos ícones nos títulos das seções (exemplo) */
+.vendas-secao__titulo .icone-titulo-secao {
+    width: calc(var(--font-size-3xl) * 0.8); /* Tamanho relativo ao título */
+    height: calc(var(--font-size-3xl) * 0.8);
+    color: var(--color-accent-blue-vendas); /* Cor secundária de destaque */
+    margin-right: var(--spacing-3);
+    vertical-align: middle; /* Ou ajustar com flexbox no h2 */
+}
+
+/* Ícone de aspas nos depoimentos (o ::before já faz isso, mas se fosse SVG) */
+.depoimento-item .quote-icon svg {
+    width: var(--spacing-8);
+    height: var(--spacing-8);
+    color: var(--color-border-subtle-vendas); /* Aspas bem sutis */
+    /* Posicionamento absoluto ou float */
+}
+
+/* Ícones no FAQ (se interativo) */
+.faq-pergunta .faq-toggle-icon {
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+    color: var(--color-text-light-vendas);
+    position: absolute;
+    right: var(--spacing-5);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+}
+/* .faq-item.open .faq-toggle-icon { transform: translateY(-50%) rotate(45deg); } */
 
 .vendas-secao {
     padding: var(--space-10) 0; /* Equivalente a py-40 (5rem * 2) */
@@ -38,28 +114,583 @@ body.pagina-vendas { /* Adicionar classe ao body em vendas.html se quiser escopo
     background-color: var(--color-slate-100, #f1f5f9);
 }
 
-#secao-alerta, #secao-oferta-final, #secao-rodape { /* Seções chave com fundo padrão ou específico */
-    background-color: var(--color-background); /* Usar o fundo principal */
+#secao-alerta, #secao-rodape { /* Seções chave com fundo padrão ou específico */
+    background-color: var(--color-background-page-vendas); /* Usar o fundo principal da página de vendas */
 }
+/* #secao-oferta-final terá seu próprio fundo escuro mais abaixo */
 
 #secao-objecoes-garantia {
-    background-color: var(--color-emerald-50, #ecfdf5); /* Fundo suave para garantia */
+    background-color: var(--color-surface, #FFFFFF); /* Fundo mais clean para FAQ/Garantia */
 }
 
+/* Definindo as novas cores como variáveis globais para esta página, caso não estejam em style.css */
+:root {
+    --color-background-page-vendas: #F9F9F9;
+    --color-text-primary-vendas: #222222;
+    --color-text-secondary-vendas: #555555;
+    --color-text-light-vendas: #888888;
+    --color-border-subtle-vendas: #EAEAEA;
+    --color-accent-green-vendas: #00AD6A;
+    --color-accent-green-hover-vendas: #009359;
+    --color-accent-blue-vendas: #00A9E0;
+}
 
-.vendas-secao__titulo {
+body.pagina-vendas { /* Se decidirmos usar uma classe no body para escopo */
+    background-color: var(--color-background-page-vendas);
+    color: var(--color-text-primary-vendas);
+    font-family: var(--font-family-base); /* 'Inter' já definido em style.css */
+    line-height: var(--line-height-relaxed, 1.65); /* Aumentar um pouco o padrão para a página */
+}
+
+/* Títulos Gerais da Página de Vendas */
+.vendas-secao__titulo { /* h2 geralmente */
+    color: var(--color-text-primary-vendas);
+    font-weight: var(--font-weight-extrabold, 800); /* Mais peso */
+    letter-spacing: -0.025em; /* Mais apertado */
+    margin-bottom: var(--space-5, 1.25rem); /* Ajuste de margem */
     font-size: var(--font-size-3xl); /* 2rem a 3rem */
-    font-weight: var(--font-weight-extrabold, 800);
-    color: var(--color-slate-800);
-    margin-bottom: var(--space-8); /* 2rem */
     text-align: center;
     line-height: var(--line-height-tight);
 }
 
-.vendas-secao__subtitulo { /* Usado em alguns contextos, não é um padrão para todas as seções */
-    font-size: var(--font-size-xl); /* 1.25rem a 1.5rem */
-    color: var(--color-slate-600);
-    margin-bottom: var(--space-6); /* 1.5rem */
+/* .vendas-secao__subtitulo foi generalizado abaixo para blocos de texto */
+
+/* --- Seção 1: Alerta Personalizado --- */
+#secao-alerta .titulo-principal { /* h1 */
+    color: var(--color-coral-500); /* Mantém a cor de alerta */
+    font-weight: var(--font-weight-black, 900);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: var(--space-5);
+}
+
+#secao-alerta .subtitulo-personalizado {
+    font-size: var(--font-size-lg);
+    text-align: center;
+    margin-bottom: var(--space-6);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    background-color: var(--color-amber-50, #fffbeb);
+    border: 1px solid var(--color-amber-400, #fbbf24);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text-primary-vendas);
+    line-height: 1.6;
+}
+
+#secao-alerta .elemento-visual {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: var(--space-6);
+    color: var(--color-amber-500, #f59e0b);
+}
+
+/* Regra geral para blocos de texto secundário/descritivo */
+.vendas-secao__subtitulo, /* Reutilizando para consistência se houver subtitulos genéricos */
+.apresentacao-ebook .descricao-principal,
+.conexao-emocional,
+.faq-resposta,
+.garantia-container .texto-garantia,
+.ancoragem-preco p,
+.autor-container .bio-autor,
+.post-scriptum p {
+    color: var(--color-text-secondary-vendas);
+    max-width: 68ch; /* Limite de caracteres por linha para melhor legibilidade */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--font-size-lg); /* Padronizar tamanho para esses blocos */
+    line-height: var(--line-height-relaxed, 1.65);
+}
+.post-scriptum p strong { /* Destaque dentro do P.S. */
+    color: var(--color-text-primary-vendas);
+}
+.conexao-emocional { /* Estilo específico adicional herdando o de cima */
+    text-align: center; /* Já era, mas para garantir */
+    margin-top: var(--space-8); /* Espaçamento superior */
+    padding: var(--space-6);
+    background-color: var(--color-emerald-50, #ecfdf5);
+    border-left: 4px solid var(--color-accent-green-vendas);
+    border-radius: var(--radius-sm);
+}
+
+
+/* --- Seção 2: Dor e Problema --- */
+.checklist-sintomas {
+    list-style: none;
+    padding-left: 0;
+    max-width: 650px;
+    margin: var(--space-8) auto;
+}
+
+.checklist-sintomas li {
+    display: flex;
+    align-items: flex-start;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+    padding: var(--space-4);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle-vendas);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text-secondary-vendas);
+    line-height: 1.55;
+}
+
+.checklist-sintomas li svg {
+    color: var(--color-accent-green-vendas);
+    margin-right: var(--space-3);
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 0.2em;
+}
+
+/* --- Seção 3: Solução (Ebook) --- */
+.apresentacao-ebook {
+    text-align: center;
+}
+
+.apresentacao-ebook .imagem-ebook-container img {
+    max-width: 100%;
+    width: 320px;
+    height: auto;
+    box-shadow: var(--shadow-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-8);
+    transition: transform 0.3s var(--ease-standard);
+}
+.apresentacao-ebook .imagem-ebook-container img:hover {
+    transform: scale(1.05);
+}
+
+.apresentacao-ebook .subtitulo-ebook { /* Nome do Ebook */
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--color-accent-green-vendas);
+    letter-spacing: -0.02em;
+}
+
+.apresentacao-ebook .descricao-principal {
+    margin-top: var(--space-4); /* Espaçamento superior */
+    margin-bottom: var(--space-8);
+}
+
+/* CTA Button Global (para esta página) */
+.btn-cta-vendas {
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-lg);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    text-decoration: none;
+    background: var(--gradient-coral, var(--color-coral-500)); /* Cor original mantida para o primeiro CTA */
+    color: #FFFFFF; /* Texto branco para botões com fundo verde/coral */
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 480px;
+    margin: var(--space-6) auto;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: var(--font-weight-semibold, 600);
+}
+
+.btn-cta-vendas:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+}
+
+.btn-cta-vendas:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.cta-subtexto {
+    text-align: center;
+    font-size: var(--font-size-sm, 0.875rem);
+    margin-top: var(--space-3);
+    color: var(--color-text-light-vendas);
+}
+
+/* --- Seção 4: Valor (O que você vai encontrar) --- */
+.lista-beneficios-ebook {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-8) auto;
+}
+
+.lista-beneficios-ebook li {
+    display: flex;
+    align-items: flex-start;
+    font-size: var(--font-size-base);
+    padding: var(--space-5);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border-left: 3px solid var(--color-accent-green-vendas);
+    color: var(--color-text-secondary-vendas);
+    line-height: 1.55;
+}
+.lista-beneficios-ebook li strong {
+    color: var(--color-text-primary-vendas);
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.lista-beneficios-ebook li svg {
+    color: var(--color-accent-green-vendas);
+    margin-right: var(--space-4);
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    margin-top: 0.1em;
+}
+
+.visual-mockups {
+    text-align: center;
+    margin-top: var(--space-8);
+}
+.visual-mockups img {
+    max-width: 100%;
+    width: 220px; /* Largura base para os mockups, pode ajustar */
+    height: auto; /* Altura automática para manter proporção */
+    object-fit: scale-down; /* Garante que a imagem caiba sem cortar, diminuindo se necessário */
+    margin: var(--spacing-3);
+    border-radius: var(--radius-md); /* Consistência com outros cards/elementos */
+    box-shadow: var(--shadow-md); /* Sombra mais sutil que shadow-lg */
+    background-color: var(--color-surface-vendas);
+    padding: var(--spacing-2); /* Pequeno padding se a imagem tiver fundo transparente */
+}
+
+
+/* --- Seção 5: Prova Social --- */
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.depoimento-item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle-vendas);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+.depoimento-item .depoimento-imagem {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-4);
+    border: 1px solid var(--color-border-subtle-vendas);
+}
+
+.depoimento-item .depoimento-texto {
+    font-style: italic;
+    margin-bottom: var(--space-4);
+    flex-grow: 1;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary-vendas);
+}
+.depoimento-item .depoimento-texto::before {
+    content: "“";
+    font-size: 2em;
+    color: var(--color-accent-green-vendas); /* Usar cor de acento */
+    float: left;
+    margin-right: 0.1em;
+    line-height: 0.8em;
+}
+
+
+.depoimento-item .depoimento-autor {
+    font-weight: var(--font-weight-semibold);
+    text-align: right;
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--color-text-light-vendas);
+}
+.depoimento-item .depoimento-autor strong { /* Nome do autor */
+    display: block;
+    font-size: var(--font-size-base);
+    color: var(--color-accent-green-vendas);
+}
+
+/* --- Seção 6: Objeções e Garantia --- */
+.faq-lista {
+    max-width: 750px;
+    margin: var(--space-8) auto var(--space-10) auto;
+}
+
+.faq-item {
+    margin-bottom: var(--space-4);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-subtle-vendas);
+}
+
+.faq-pergunta {
+    padding: var(--space-4) var(--space-5);
+    font-weight: var(--font-weight-semibold, 600);
+    color: var(--color-text-primary-vendas);
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border-subtle-vendas);
+    position: relative;
+}
+
+.faq-resposta {
+    padding: var(--space-5);
+    font-size: var(--font-size-base);
+}
+
+.garantia-container {
+    text-align: center;
+    padding: var(--space-8) var(--space-6);
+    background-color: var(--color-surface);
+    border: 3px dashed var(--color-accent-green-vendas);
+    border-radius: var(--radius-xl);
+    margin-top: var(--space-10);
+    box-shadow: var(--shadow-md);
+}
+
+.garantia-container .selo-garantia {
+    max-width: 100%;
+    width: 130px;
+    margin-bottom: var(--space-5);
+}
+
+.garantia-container .titulo-garantia {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--color-accent-green-vendas);
+    letter-spacing: -0.02em;
+}
+
+.garantia-container .texto-garantia {
+    font-size: var(--font-size-base);
+}
+
+/* --- Seção 7: Oferta Final e Escassez --- */
+#secao-oferta-final {
+    background-color: var(--color-slate-800);
+    color: var(--color-slate-100);
+}
+#secao-oferta-final .vendas-secao__titulo,
+#secao-oferta-final .texto-acesso,
+#secao-oferta-final .preco-parcelado,
+#secao-oferta-final .escassez-container p {
+    color: var(--color-slate-200, #e2e8f0);
+}
+/* Herda .ancoragem-preco p da regra geral de blocos de texto, mas sobrescreve a cor */
+#secao-oferta-final .ancoragem-preco p {
+     color: var(--color-slate-200, #e2e8f0);
+}
+
+
+.ancoragem-preco {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.ancoragem-preco .preco-cortado, .ancoragem-preco del {
+    text-decoration: line-through;
+    color: var(--color-slate-400, #94a3b8);
+    font-size: 1.1em;
+}
+
+.preco-final-container {
+    text-align: center;
+    margin-bottom: var(--space-8);
+    padding: var(--space-8);
+    background-color: var(--color-slate-700);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.preco-final-container .texto-acesso {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-3);
+    font-weight: var(--font-weight-medium);
+}
+
+.preco-final-container .preco {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    font-weight: var(--font-weight-black);
+    color: var(--color-accent-green-vendas); /* Cor de destaque para o preço */
+    margin-bottom: var(--space-1);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.preco-final-container .preco-parcelado {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+}
+
+.escassez-container {
+    text-align: center;
+    margin: var(--space-8) 0;
+}
+.escassez-container p strong {
+    color: var(--color-slate-50);
+}
+
+.contador-regressivo {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-coral-400);
+    background-color: rgba(0,0,0, 0.2);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-md);
+    display: inline-block;
+    margin: var(--space-3) 0 var(--space-5) 0;
+    border: 1px solid var(--color-coral-500);
+    min-width: 200px;
+}
+
+.texto-vagas-limitadas {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    background-color: var(--color-amber-500);
+    color: var(--color-slate-900);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+}
+#secao-oferta-final .btn-cta-vendas {
+    background: var(--color-accent-green-vendas); /* CTA final com cor primária de destaque */
+}
+#secao-oferta-final .btn-cta-vendas:hover {
+     box-shadow: 0 15px 30px var(--color-accent-green-hover-vendas); /* Sombra com a cor do hover */
+}
+
+
+.logos-seguranca {
+    text-align: center;
+    margin-top: var(--space-8);
+}
+
+.logos-seguranca img {
+    height: 35px;
+    margin: 0 var(--space-3);
+    opacity: 0.8;
+    filter: grayscale(30%) contrast(110%);
+}
+
+/* --- Seção 8: Rodapé --- */
+.rodape-vendas {
+    text-align: center;
+    background-color: var(--color-slate-100);
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-8);
+}
+
+.autor-container {
+    margin-bottom: var(--space-8);
+}
+
+.autor-container .foto-autor {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--space-5);
+    box-shadow: var(--shadow-xl);
+    border: 4px solid white;
+}
+
+.autor-container .nome-autor {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary-vendas);
+    margin-bottom: var(--space-1);
+}
+
+.autor-container .bio-autor {
+    font-size: var(--font-size-base);
+}
+
+.post-scriptum {
+    font-size: var(--font-size-lg);
+    font-style: italic;
+    max-width: 750px;
+    margin: var(--space-8) auto 0 auto;
+    padding: var(--space-6);
+    background-color: var(--color-surface);
+    border-top: 3px solid var(--color-accent-green-vendas);
+    border-bottom: 3px solid var(--color-accent-green-vendas);
+    border-radius: var(--radius-sm);
+}
+.rodape-vendas .copyright {
+    font-size: var(--font-size-sm, 0.875rem);
+    margin-top: var(--space-8);
+    color: var(--color-text-light-vendas);
+}
+
+/* Links Globais - Reforçando */
+a {
+    color: var(--color-accent-green-vendas);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium, 500);
+    transition: color 0.2s ease-in-out;
+}
+a:hover {
+    color: var(--color-accent-green-hover-vendas);
+    text-decoration: underline;
+}
+
+
+/* Responsividade Geral */
+@media (max-width: 600px) {
+    .vendas-secao__titulo {
+        font-size: var(--font-size-2xl);
+    }
+    #secao-alerta .titulo-principal {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    .btn-cta-vendas {
+        padding: var(--space-3) var(--space-6);
+        font-size: clamp(1rem, 2.2vw, 1.1rem);
+    }
+    .preco-final-container .preco {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
+    .contador-regressivo {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        padding: var(--space-3) var(--space-4);
+    }
+    .logos-seguranca img {
+        height: 28px;
+        margin: 0 var(--space-2) var(--space-2) 0;
+    }
+    .lista-beneficios-ebook, .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+     /* Ajuste para blocos de texto em telas menores */
+    .vendas-secao__subtitulo,
+    .apresentacao-ebook .descricao-principal,
+    .conexao-emocional,
+    .faq-resposta,
+    .garantia-container .texto-garantia,
+    .ancoragem-preco p,
+    .autor-container .bio-autor,
+    .post-scriptum p {
+        font-size: var(--font-size-base); /* Um pouco menor em telas pequenas para não parecer tão grande */
+        max-width: 90%; /* Ocupar mais da largura da tela */
+    }
+}
     text-align: center;
     font-weight: var(--font-weight-normal);
     max-width: 750px;
