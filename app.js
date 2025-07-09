@@ -452,73 +452,47 @@ function finishQuiz() {
     // Calculate total score
     totalScore = answers.reduce((sum, answer) => sum + answer.points, 0);
     
-    // Animate quiz section out
-    quizSection.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-    quizSection.style.opacity = '0';
-    quizSection.style.transform = 'translateY(-50px)';
+    // Calculate total score
+    totalScore = answers.reduce((sum, answer) => sum + answer.points, 0);
     
-    setTimeout(() => {
-        quizSection.classList.add('hidden');
-        resultSection.classList.remove('hidden');
-        
-        // Reset result section
-        resultSection.style.opacity = '0';
-        resultSection.style.transform = 'translateY(50px)';
-        
-        setTimeout(() => {
-            resultSection.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            resultSection.style.opacity = '1';
-            resultSection.style.transform = 'translateY(0)';
-            
-            displayResult();
-            isTransitioning = false;
-        }, 50);
-    }, 300);
-}
-
-function displayResult() {
     const resultData = getResultData(totalScore);
+    let nivelParam = 'desconhecido';
 
-    // Celebrar a conclusão do quiz antes de mostrar os resultados
-    celebrateProgress('Parabéns! Quiz concluído! 🎊');
-    
-    // Update result elements
-    const resultTitle = document.getElementById('result-title');
-    const resultDescription = document.getElementById('result-description');
-    const resultRecommendation = document.getElementById('result-recommendation');
-    const resultEmoji = document.getElementById('result-emoji');
-    
-    if (resultTitle) {
-        resultTitle.textContent = resultData.level;
-        resultTitle.style.color = resultData.color;
+    // Mapear o nível de resultado para um parâmetro de URL simples
+    // Ex: "Nível Baixo de Toxinas" -> "baixo"
+    // Isso precisa ser consistente com o que vendas.js espera.
+    if (resultData.level.toLowerCase().includes('crítico') || resultData.level.toLowerCase().includes('critico')) {
+        nivelParam = 'critico';
+    } else if (resultData.level.toLowerCase().includes('alto')) {
+        nivelParam = 'alto';
+    } else if (resultData.level.toLowerCase().includes('moderado')) {
+        nivelParam = 'moderado';
+    } else if (resultData.level.toLowerCase().includes('baixo') || resultData.level.toLowerCase().includes('leve')) {
+        nivelParam = 'leve';
     }
-    
-    if (resultDescription) {
-        resultDescription.textContent = resultData.description;
-    }
-    
-    if (resultRecommendation) {
-        resultRecommendation.textContent = resultData.recommendation;
-    }
-    
-    if (resultEmoji) {
-        resultEmoji.textContent = resultData.emoji;
-    }
-    
-    // Trigger animations
-    setTimeout(() => {
-        const animatedElements = document.querySelectorAll('.result-card, .offer-card, .testimonials');
-        animatedElements.forEach((element, index) => {
-            if (element) {
-                element.style.animationDelay = `${index * 0.2}s`;
-                element.classList.add('animate-in');
-            }
-        });
-    }, 100);
-    
-    // Track result for analytics
+
+    // Track quiz completion before redirecting
     trackQuizCompletion(resultData);
+    celebrateProgress('Parabéns! Quiz concluído! 🎊 Redirecionando para sua oferta especial...');
+
+    // Animate quiz section out - opcional, pois haverá um redirecionamento
+    quizSection.style.transition = 'all 0.3s ease-out';
+    quizSection.style.opacity = '0';
+    quizSection.style.transform = 'translateY(-30px)';
+
+    // Redirecionar para vendas.html com o parâmetro do nível
+    setTimeout(() => {
+        window.location.href = `vendas.html?nivel=${nivelParam}&pontos=${totalScore}`;
+        // Não precisamos mais mostrar a #result-section ou chamar displayResult() aqui.
+        // A lógica de exibição de resultados e oferta agora está em vendas.html e vendas.js
+        isTransitioning = false;
+    }, 500); // Pequeno delay para a animação de saída e a mensagem de celebração serem vistas
 }
+
+// A função displayResult() não é mais chamada diretamente por finishQuiz,
+// mas getResultData e trackQuizCompletion ainda são úteis.
+// A maior parte da lógica de displayResult foi movida para vendas.html/vendas.js
+// ou não é mais necessária nesta página.
 
 function getResultData(score) {
     const categories = quizData.result_categories;
