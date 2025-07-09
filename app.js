@@ -331,7 +331,7 @@ function selectOption(button, option, optionIndex) {
         } else {
             finishQuiz();
         }
-    }, 800);
+    }, 300); // Reduzido de 800ms para 300ms
 }
 
 function nextQuestion() {
@@ -369,9 +369,8 @@ function updateProgress() {
     // Add progress milestone celebrations
     if (progress === 50) {
         celebrateProgress('Você está na metade! 🎉');
-    } else if (progress === 100) {
-        celebrateProgress('Parabéns! Quiz concluído! 🎊');
     }
+    // A celebração de 100% foi movida para a função displayResult
 }
 
 function celebrateProgress(message) {
@@ -479,6 +478,9 @@ function finishQuiz() {
 
 function displayResult() {
     const resultData = getResultData(totalScore);
+
+    // Celebrar a conclusão do quiz antes de mostrar os resultados
+    celebrateProgress('Parabéns! Quiz concluído! 🎊');
     
     // Update result elements
     const resultTitle = document.getElementById('result-title');
@@ -600,13 +602,15 @@ function createRipple(button, event = null) {
 }
 
 function addHoverEffect(element) {
-    element.style.transform = 'translateY(-2px) scale(1.01)';
+    // Adiciona a classe para o efeito de hover
+    if (!element.classList.contains('selected')) { // Para não interferir visualmente com o estado selecionado imediatamente
+        element.classList.add('hover-effect');
+    }
 }
 
 function removeHoverEffect(element) {
-    if (!element.classList.contains('selected')) {
-        element.style.transform = 'translateY(0) scale(1)';
-    }
+    // Remove a classe do efeito de hover
+    element.classList.remove('hover-effect');
 }
 
 // Keyboard Navigation
