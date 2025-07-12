@@ -1,164 +1,181 @@
 /* Estilos específicos para a página vendas.html */
 
-:root { /* Reforçando/Sobrescrevendo variáveis para o design 'Apple Clean Detox' */
-    --color-background-page-vendas: #F9FAFB;
-    --color-text-primary-vendas: #1F2937;
-    --color-text-secondary-vendas: #4B5563;
-    --color-text-light-vendas: #6B7280; /* Atualizado para melhor contraste que #9CA3AF */
-    --color-border-subtle-vendas: #E5E7EB;
+:root {
+  /* Reforçando/Sobrescrevendo variáveis para o design 'Apple Clean Detox' */
+  --color-background-page-vendas: #f9fafb;
+  --color-text-primary-vendas: #1f2937;
+  --color-text-secondary-vendas: #4b5563;
+  --color-text-light-vendas: #6b7280; /* Atualizado para melhor contraste que #9CA3AF */
+  --color-border-subtle-vendas: #e5e7eb;
 
-    /* Verdes Naturais */
-    --color-accent-green-vendas: #047857; /* Escurecido (era #059669) para melhor contraste de texto branco no botão */
-    --color-accent-green-hover-vendas: #065F46; /* Mais escuro para hover */
-    --color-accent-green-light-bg-vendas: #ECFDF5;
-    --color-accent-green-medium-vendas: #34D399;
-    --color-accent-green-price-darkbg: #6EE7B7; /* Verde claro para preço em fundo escuro */
+  /* Verdes Naturais */
+  --color-accent-green-vendas: #047857; /* Escurecido (era #059669) para melhor contraste de texto branco no botão */
+  --color-accent-green-hover-vendas: #065f46; /* Mais escuro para hover */
+  --color-accent-green-light-bg-vendas: #ecfdf5;
+  --color-accent-green-medium-vendas: #34d399;
+  --color-accent-green-price-darkbg: #6ee7b7; /* Verde claro para preço em fundo escuro */
 
-    /* Tons Terrosos Sutis */
-    --color-earth-light-bg-vendas: #FDFBF5;
-    --color-earth-border-vendas: #F3EADA;
-    --color-earth-text-vendas: #786A60;
+  /* Tons Terrosos Sutis */
+  --color-earth-light-bg-vendas: #fdfbf5;
+  --color-earth-border-vendas: #f3eada;
+  --color-earth-text-vendas: #786a60;
 
-    /* Azul Celeste/Água */
-    --color-water-blue-vendas: #A8D8EA;
-    --color-water-blue-light-bg-vendas: #EFF9FF;
+  /* Azul Celeste/Água */
+  --color-water-blue-vendas: #a8d8ea;
+  --color-water-blue-light-bg-vendas: #eff9ff;
 
-    /* Cores de Alerta (Seção 1) */
-    --color-alert-warning-bg-vendas: #FFFBEB;
-    --color-alert-warning-border-vendas: #FDBF2D;
-    --color-alert-warning-icon-vendas: #F59E0B;
-    --color-alert-warning-text-vendas: #B45309;
+  /* Cores de Alerta (Seção 1) */
+  --color-alert-warning-bg-vendas: #fffbeb;
+  --color-alert-warning-border-vendas: #fdbf2d;
+  --color-alert-warning-icon-vendas: #f59e0b;
+  --color-alert-warning-text-vendas: #b45309;
 
-    /* Cores de CTA (Outros) */
-    --color-coral-cta-vendas: #F87171; /* Tailwind Red 400 (contraste com branco ~3.05:1, requer texto grande) */
-    --color-coral-cta-hover-vendas: #EF4444; /* Tailwind Red 500 */
+  /* Cores de CTA (Outros) */
+  --color-coral-cta-vendas: #f87171; /* Tailwind Red 400 (contraste com branco ~3.05:1, requer texto grande) */
+  --color-coral-cta-hover-vendas: #ef4444; /* Tailwind Red 500 */
 
-    --color-surface-vendas: #FFFFFF;
+  --color-surface-vendas: #ffffff;
 
-    /* Cores Slate (para referência se não vierem de style.css) */
-    --color-slate-800: #1F2937;
-    --color-slate-100: #F1F5F9; /* Usado para fundos alternados se necessário */
-    --color-slate-200: #E5E7EB;
-    --color-slate-400: #9CA3AF; /* Para textos muito claros ou desabilitados */
-    --color-slate-700: #374151; /* Para cards em fundos escuros */
-    --color-slate-50: #F9FAFB;
+  /* Cores Slate (para referência se não vierem de style.css) */
+  --color-slate-800: #1f2937;
+  --color-slate-100: #f1f5f9; /* Usado para fundos alternados se necessário */
+  --color-slate-200: #e5e7eb;
+  --color-slate-400: #9ca3af; /* Para textos muito claros ou desabilitados */
+  --color-slate-700: #374151; /* Para cards em fundos escuros */
+  --color-slate-50: #f9fafb;
 
+  --font-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Espaçamentos (baseados em Tailwind, convertidos para rem, 1rem = 16px) */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
 
-    /* Espaçamentos (baseados em Tailwind, convertidos para rem, 1rem = 16px) */
-    --spacing-1: 0.25rem;
-    --spacing-2: 0.5rem;
-    --spacing-3: 0.75rem;
-    --spacing-4: 1rem;
-    --spacing-5: 1.25rem;
-    --spacing-6: 1.5rem;
-    --spacing-8: 2rem;
-    --spacing-10: 2.5rem;
-    --spacing-12: 3rem;
-    --spacing-16: 4rem;
-    --spacing-20: 5rem;
-    --spacing-24: 6rem;
+  /* Font Sizes (usando clamp para responsividade) */
+  --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 1.8vw, 1rem);
+  --font-size-base: clamp(1rem, 2vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 2.2vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 2.5vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 3vw, 1.875rem); /* 30px */
+  --font-size-3xl: clamp(1.875rem, 4vw, 2.25rem); /* 36px */
+  --font-size-4xl: clamp(2.25rem, 5vw, 3rem); /* 48px */
 
-    /* Font Sizes (usando clamp para responsividade) */
-    --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem);
-    --font-size-sm: clamp(0.875rem, 1.8vw, 1rem);
-    --font-size-base: clamp(1rem, 2vw, 1.125rem);
-    --font-size-lg: clamp(1.125rem, 2.2vw, 1.25rem);
-    --font-size-xl: clamp(1.25rem, 2.5vw, 1.5rem);
-    --font-size-2xl: clamp(1.5rem, 3vw, 1.875rem); /* 30px */
-    --font-size-3xl: clamp(1.875rem, 4vw, 2.25rem); /* 36px */
-    --font-size-4xl: clamp(2.25rem, 5vw, 3rem);    /* 48px */
+  /* Font Weights (já definidos em style.css, mas podemos referenciar aqui se necessário) */
+  /* --font-weight-normal: 400; ... etc. */
 
-    /* Font Weights (já definidos em style.css, mas podemos referenciar aqui se necessário) */
-    /* --font-weight-normal: 400; ... etc. */
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
 
-    /* Line Heights */
-    --line-height-tight: 1.25;
-    --line-height-snug: 1.375;
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.65;
+  /* Border Radius */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+  --radius-full: 9999px;
 
-    /* Border Radius */
-    --radius-sm: 0.25rem; /* 4px */
-    --radius-md: 0.5rem;  /* 8px */
-    --radius-lg: 0.75rem; /* 12px */
-    --radius-xl: 1rem;   /* 16px */
-    --radius-full: 9999px;
-
-    /* Shadows (sutis) */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-    --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  /* Shadows (sutis) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07),
+    0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07),
+    0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
-    background-color: var(--color-background-page-vendas);
-    color: var(--color-text-primary-vendas);
-    font-family: var(--font-family-sans);
-    line-height: var(--line-height-relaxed);
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background-page-vendas);
+  color: var(--color-text-primary-vendas);
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .vendas-container {
-    width: 100%;
-    max-width: 860px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 var(--spacing-5);
+  width: 100%;
+  max-width: 860px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 var(--spacing-5);
 }
 
 @media (max-width: 900px) {
-    .vendas-container {
-        padding: 0 var(--spacing-4);
-    }
+  .vendas-container {
+    padding: 0 var(--spacing-4);
+  }
 }
 
 .vendas-secao {
-    padding: var(--spacing-16) 0; /* Aumentar padding vertical significativamente */
-    border-bottom: 1px solid var(--color-border-subtle-vendas);
+  padding: var(--spacing-16) 0; /* Aumentar padding vertical significativamente */
+  border-bottom: 1px solid var(--color-border-subtle-vendas);
 }
 .vendas-secao:last-child,
-#secao-oferta-final { /* Oferta final não tem borda inferior */
-    border-bottom: none;
+#secao-oferta-final {
+  /* Oferta final não tem borda inferior */
+  border-bottom: none;
 }
 .vendas-secao:nth-child(odd) {
-    background-color: var(--color-surface-vendas); /* Alterna com branco/superfície */
+  background-color: var(
+    --color-surface-vendas
+  ); /* Alterna com branco/superfície */
 }
 #secao-alerta,
 #secao-rodape {
-    background-color: var(--color-background-page-vendas); /* Fundo principal */
+  background-color: #f1f1f1; /* Fundo principal */
 }
 #secao-objecoes-garantia {
-     background-color: var(--color-surface-vendas);
+  background-color: var(--color-surface-vendas);
 }
-
 
 /* Tipografia Base e Títulos */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--color-text-primary-vendas);
-    font-family: var(--font-family-sans);
-    letter-spacing: -0.025em; /* Levemente mais apertado para títulos */
-    line-height: var(--line-height-tight);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-primary-vendas);
+  font-family: var(--font-family-sans);
+  letter-spacing: -0.025em; /* Levemente mais apertado para títulos */
+  line-height: var(--line-height-tight);
 }
 
-.vendas-secao__titulo { /* h2 geralmente */
-    font-size: var(--font-size-3xl);
-    font-weight: 700; /* Bold */
-    margin-bottom: var(--spacing-10); /* Mais espaço abaixo do título */
-    text-align: center;
+.vendas-secao__titulo {
+  /* h2 geralmente */
+  font-size: var(--font-size-3xl);
+  font-weight: 700; /* Bold */
+  margin-bottom: var(--spacing-10); /* Mais espaço abaixo do título */
+  text-align: center;
 }
 
-p, li, .faq-resposta {
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary-vendas);
-    line-height: var(--line-height-relaxed);
+p,
+li,
+.faq-resposta {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary-vendas);
+  line-height: var(--line-height-relaxed);
 }
-li { margin-bottom: var(--spacing-2); }
+li {
+  margin-bottom: var(--spacing-2);
+}
 
 /* Blocos de texto principais com legibilidade otimizada */
 .vendas-secao__subtitulo,
@@ -169,511 +186,590 @@ li { margin-bottom: var(--spacing-2); }
 .ancoragem-preco p,
 .autor-container .bio-autor,
 .post-scriptum p {
-    max-width: 65ch; /* Limite de caracteres por linha */
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 65ch; /* Limite de caracteres por linha */
+  margin-left: auto;
+  margin-right: auto;
 }
 .post-scriptum p strong {
-    color: var(--color-text-primary-vendas);
+  color: var(--color-text-primary-vendas);
 }
 
 /* --- Seção 1: Alerta Personalizado --- */
-#secao-alerta .titulo-principal { /* h1 */
-    font-size: var(--font-size-4xl);
-    font-weight: 800; /* ExtraBold */
-    color: var(--color-text-primary-vendas);
-    line-height: 1.1;
-    text-align: center;
-    margin-bottom: var(--spacing-4);
+#secao-alerta .titulo-principal {
+  /* h1 */
+  font-size: var(--font-size-4xl);
+  font-weight: 800; /* ExtraBold */
+  color: #ff4c07;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: var(--spacing-4);
 }
 #secao-alerta .subtitulo-personalizado {
-    font-size: var(--font-size-lg);
-    text-align: center;
-    margin-bottom: var(--spacing-6);
-    padding: var(--spacing-5);
-    border-radius: var(--radius-lg); /* Mais arredondado */
-    background-color: var(--color-accent-green-light-bg-vendas);
-    border: 1px solid var(--color-accent-green-vendas);
-    color: var(--color-text-primary-vendas);
+  font-size: var(--font-size-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+  padding: var(--spacing-5);
+  border-radius: var(--radius-lg); /* Mais arredondado */
+  background-color: var(--color-accent-green-light-bg-vendas);
+  border: 1px solid var(--color-accent-green-vendas);
+  color: var(--color-text-primary-vendas);
 }
 #secao-alerta .elemento-visual {
-    text-align: center;
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-6);
-    color: var(--color-accent-green-vendas);
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-6);
+  color: var(--color-accent-green-vendas);
 }
 
 /* --- Seção 2: Dor e Problema --- */
 .checklist-sintomas {
-    list-style: none;
-    padding-left: 0;
-    max-width: 650px;
-    margin: var(--spacing-8) auto;
+  list-style: none;
+  padding-left: 0;
+  max-width: 650px;
+  margin: var(--spacing-8) auto;
 }
 .checklist-sintomas li {
-    display: flex;
-    align-items: flex-start;
-    font-size: var(--font-size-base); /* Ajustado para base */
-    padding: var(--spacing-3);
-    background-color: var(--color-surface-vendas);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border-subtle-vendas);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: var(--spacing-3);
+  display: flex;
+  align-items: flex-start;
+  font-size: var(--font-size-base); /* Ajustado para base */
+  padding: var(--spacing-3);
+  background-color: var(--color-surface-vendas);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle-vendas);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-3);
 }
-.checklist-icon { /* Classe para SVGs nas listas */
-    width: var(--spacing-5);
-    height: var(--spacing-5);
-    color: var(--color-accent-green-vendas);
-    margin-right: var(--spacing-3);
-    flex-shrink: 0;
-    margin-top: 0.1em; /* Alinhamento */
+.checklist-icon {
+  /* Classe para SVGs nas listas */
+  width: var(--spacing-5);
+  height: var(--spacing-5);
+  color: var(--color-accent-green-vendas);
+  margin-right: var(--spacing-3);
+  flex-shrink: 0;
+  margin-top: 0.1em; /* Alinhamento */
 }
 .conexao-emocional {
-    text-align: center;
-    margin-top: var(--spacing-10);
-    padding: var(--spacing-6);
-    background-color: var(--color-accent-green-light-bg-vendas);
-    border-left: 4px solid var(--color-accent-green-vendas);
-    border-radius: var(--radius-md);
-    font-size: var(--font-size-lg);
+  text-align: center;
+  margin-top: var(--spacing-10);
+  padding: var(--spacing-6);
+  background-color: var(--color-accent-green-light-bg-vendas);
+  border-left: 4px solid var(--color-accent-green-vendas);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
 }
 
 /* --- Seção 3: Solução (Ebook) --- */
-.apresentacao-ebook { text-align: center; }
-.apresentacao-ebook .imagem-ebook-container img {
-    max-width: 100%;
-    width: 300px;
-    height: auto;
-    box-shadow: var(--shadow-xl); /* Sombra mais destacada para o produto */
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--spacing-8);
-    transition: transform 0.3s ease-in-out;
+.apresentacao-ebook {
+  text-align: center;
 }
-.apresentacao-ebook .imagem-ebook-container img:hover { transform: scale(1.03); }
+.apresentacao-ebook .imagem-ebook-container img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  box-shadow: var(--shadow-xl); /* Sombra mais destacada para o produto */
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-8);
+  transition: transform 0.3s ease-in-out;
+}
+.apresentacao-ebook .imagem-ebook-container img:hover {
+  transform: scale(1.03);
+}
 .apresentacao-ebook .subtitulo-ebook {
-    font-size: var(--font-size-2xl);
-    font-weight: 700; /* Bold */
-    margin-bottom: var(--spacing-3);
-    color: var(--color-accent-green-vendas);
+  font-size: var(--font-size-2xl);
+  font-weight: 700; /* Bold */
+  margin-bottom: var(--spacing-3);
+  color: var(--color-accent-green-vendas);
 }
 .apresentacao-ebook .descricao-principal {
-    margin-top: var(--spacing-3);
-    margin-bottom: var(--spacing-8);
-    font-size: var(--font-size-lg);
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-8);
+  font-size: var(--font-size-lg);
 }
 
 /* --- Botões CTA --- */
 .btn-cta-vendas {
-    display: inline-block; /* Para margin auto funcionar se não for display block */
-    padding: var(--spacing-4) var(--spacing-8);
-    border-radius: var(--radius-md);
-    font-size: var(--font-size-lg);
-    font-weight: 600; /* Semibold */
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    text-decoration: none;
-    color: #FFFFFF;
-    border: none;
-    max-width: 420px;
-    width: 100%; /* Ocupa a largura do container se max-width permitir */
-    margin-left: auto;
-    margin-right: auto;
-    display: block; /* Para margin auto funcionar */
+  display: inline-block; /* Para margin auto funcionar se não for display block */
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
+  font-weight: 600; /* Semibold */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  max-width: 420px;
+  width: 100%; /* Ocupa a largura do container se max-width permitir */
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* Para margin auto funcionar */
 }
-#secao-solucao .btn-cta-vendas { /* Primeiro CTA */
-    background: var(--color-coral-500);
-    box-shadow: 0 4px 14px 0 rgba(255, 107, 107, 0.39);
+#secao-solucao .btn-cta-vendas {
+  /* Primeiro CTA */
+  background: var(--color-coral-500);
+  box-shadow: 0 4px 14px 0 rgba(255, 107, 107, 0.39);
 }
 #secao-solucao .btn-cta-vendas:hover {
-    background: var(--color-coral-600);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px 0 rgba(255, 107, 107, 0.45);
+  background: var(--color-coral-600);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(255, 107, 107, 0.45);
 }
-#secao-oferta-final .btn-cta-vendas { /* CTA Principal Verde */
-    background: var(--color-accent-green-vendas);
-    box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.39);
+#secao-oferta-final .btn-cta-vendas {
+  /* CTA Principal Verde */
+  background: var(--color-accent-green-vendas);
+  box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.39);
 }
 #secao-oferta-final .btn-cta-vendas:hover {
-    background: var(--color-accent-green-hover-vendas);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px 0 rgba(5, 150, 105, 0.45);
+  background: var(--color-accent-green-hover-vendas);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(5, 150, 105, 0.45);
 }
 .cta-subtexto {
-    text-align: center;
-    font-size: var(--font-size-sm);
-    margin-top: var(--spacing-3);
-    color: var(--color-text-light-vendas);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-3);
+  color: var(--color-text-light-vendas);
 }
 
 /* --- Seção 4: Valor --- */
 .lista-beneficios-ebook {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-6);
-    margin: var(--spacing-10) auto;
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-6);
+  margin: var(--spacing-10) auto;
 }
 .lista-beneficios-ebook li {
-    background-color: var(--color-surface-vendas);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border-subtle-vendas);
-    box-shadow: var(--shadow-md);
-    padding: var(--spacing-5);
-    margin-bottom: 0; /* Removido margin-bottom de li, gap cuida disso */
+  background-color: var(--color-surface-vendas);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle-vendas);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-5);
+  margin-bottom: 0; /* Removido margin-bottom de li, gap cuida disso */
 }
-.beneficio-icon { /* Classe para SVGs nos benefícios */
-    width: var(--spacing-6); /* Maior */
-    height: var(--spacing-6);
-    color: var(--color-accent-green-vendas);
-    margin-right: var(--spacing-4);
-    margin-top: 0.05em;
+.beneficio-icon {
+  /* Classe para SVGs nos benefícios */
+  width: var(--spacing-6); /* Maior */
+  height: var(--spacing-6);
+  color: var(--color-accent-green-vendas);
+  margin-right: var(--spacing-4);
+  margin-top: 0.05em;
 }
 .lista-beneficios-ebook li strong {
-    color: var(--color-text-primary-vendas);
-    font-weight: 600; /* Semibold */
-    display: block;
-    margin-bottom: var(--spacing-1);
-    font-size: 1.05em;
+  color: var(--color-text-primary-vendas);
+  font-weight: 600; /* Semibold */
+  display: block;
+  margin-bottom: var(--spacing-1);
+  font-size: 1.05em;
 }
-.visual-mockups { text-align: center; margin-top: var(--spacing-10); }
+.visual-mockups {
+  text-align: center;
+  margin-top: var(--spacing-10);
+}
 .visual-mockups img {
-    max-width: 100%;
-    width: 220px; /* Largura base para os mockups, pode ajustar */
-    height: auto; /* Altura automática para manter proporção */
-    object-fit: scale-down; /* Garante que a imagem caiba sem cortar, diminuindo se necessário */
-    margin: var(--spacing-3);
-    border-radius: var(--radius-md); /* Consistência com outros cards/elementos */
-    box-shadow: var(--shadow-md); /* Sombra mais sutil que shadow-lg */
-    background-color: var(--color-surface-vendas);
-    padding: var(--spacing-2); /* Pequeno padding se a imagem tiver fundo transparente */
+  max-width: 100%;
+  width: 220px; /* Largura base para os mockups, pode ajustar */
+  height: auto; /* Altura automática para manter proporção */
+  object-fit: scale-down; /* Garante que a imagem caiba sem cortar, diminuindo se necessário */
+  margin: var(--spacing-3);
+  border-radius: var(--radius-md); /* Consistência com outros cards/elementos */
+  box-shadow: var(--shadow-md); /* Sombra mais sutil que shadow-lg */
+  background-color: var(--color-surface-vendas);
+  padding: var(
+    --spacing-2
+  ); /* Pequeno padding se a imagem tiver fundo transparente */
 }
 
 /* --- Seção 5: Prova Social --- */
 .depoimentos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-8); /* Mais espaço entre depoimentos */
-    margin-top: var(--spacing-10);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-8); /* Mais espaço entre depoimentos */
+  margin-top: var(--spacing-10);
 }
 .depoimento-item {
-    background-color: var(--color-surface-vendas);
-    border: 1px solid var(--color-border-subtle-vendas);
-    border-radius: var(--radius-xl); /* Mais arredondado */
-    padding: var(--spacing-6);
-    box-shadow: var(--shadow-lg);
-    display: flex;
-    flex-direction: column;
+  background-color: var(--color-surface-vendas);
+  border: 1px solid var(--color-border-subtle-vendas);
+  border-radius: var(--radius-xl); /* Mais arredondado */
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
 }
 .depoimento-item .depoimento-imagem {
-    width: 100%;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: var(--radius-lg); /* Consistência */
-    margin-bottom: var(--spacing-4);
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-lg); /* Consistência */
+  margin-bottom: var(--spacing-4);
 }
 .depoimento-item .depoimento-texto {
-    font-style: italic;
-    margin-bottom: var(--spacing-5);
-    flex-grow: 1;
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary-vendas);
+  font-style: italic;
+  margin-bottom: var(--spacing-5);
+  flex-grow: 1;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary-vendas);
 }
 .depoimento-item .depoimento-texto::before {
-    content: "“";
-    font-size: 3em; /* Aspas maiores e mais estilizadas */
-    color: var(--color-accent-green-vendas);
-    float: left;
-    margin-right: var(--spacing-1);
-    line-height: 0.7;
-    font-weight: 600;
+  content: "“";
+  font-size: 3em; /* Aspas maiores e mais estilizadas */
+  color: var(--color-accent-green-vendas);
+  float: left;
+  margin-right: var(--spacing-1);
+  line-height: 0.7;
+  font-weight: 600;
 }
 .depoimento-item .depoimento-autor {
-    font-weight: 500; /* Medium */
-    text-align: right;
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light-vendas);
+  font-weight: 500; /* Medium */
+  text-align: right;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light-vendas);
 }
 .depoimento-item .depoimento-autor strong {
-    display: block;
-    font-size: var(--font-size-base);
-    color: var(--color-accent-green-vendas);
-    font-weight: 600; /* Semibold */
+  display: block;
+  font-size: var(--font-size-base);
+  color: var(--color-accent-green-vendas);
+  font-weight: 600; /* Semibold */
 }
 
 /* --- Seção 6: Objeções e Garantia --- */
 .faq-lista {
-    max-width: 750px;
-    margin: var(--spacing-10) auto;
+  max-width: 750px;
+  margin: var(--spacing-10) auto;
 }
 .faq-item {
-    margin-bottom: var(--spacing-4);
-    background-color: var(--color-surface-vendas);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border-subtle-vendas);
-    box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-4);
+  background-color: var(--color-surface-vendas);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle-vendas);
+  box-shadow: var(--shadow-sm);
 }
 .faq-pergunta {
-    padding: var(--spacing-4) var(--spacing-5);
-    font-weight: 600; /* Semibold */
-    color: var(--color-text-primary-vendas);
-    cursor: pointer;
-    border-bottom: 1px solid var(--color-border-subtle-vendas);
-    position: relative;
+  padding: var(--spacing-4) var(--spacing-5);
+  font-weight: 600; /* Semibold */
+  color: var(--color-text-primary-vendas);
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border-subtle-vendas);
+  position: relative;
 }
-.faq-item:last-child .faq-pergunta { border-bottom: none; }
+.faq-item:last-child .faq-pergunta {
+  border-bottom: none;
+}
 .faq-resposta {
-    padding: 0 var(--spacing-5) var(--spacing-4) var(--spacing-5);
-    font-size: var(--font-size-base);
-    /* display: none; por padrão se for interativo, JS controlaria */
+  padding: 0 var(--spacing-5) var(--spacing-4) var(--spacing-5);
+  font-size: var(--font-size-base);
+  /* display: none; por padrão se for interativo, JS controlaria */
 }
 
 /* Estilos para Ícones nos Títulos das Seções */
 .icone-titulo-secao {
-    display: inline-block;
-    width: 0.8em; /* Relativo ao font-size do título */
-    height: 0.8em;
-    margin-right: var(--spacing-3);
-    vertical-align: -0.1em; /* Ajuste fino de alinhamento com o texto do título */
-    color: currentColor; /* Herda a cor do título por padrão */
+  display: inline-block;
+  width: 0.8em; /* Relativo ao font-size do título */
+  height: 0.8em;
+  margin-right: var(--spacing-3);
+  vertical-align: -0.1em; /* Ajuste fino de alinhamento com o texto do título */
+  color: currentColor; /* Herda a cor do título por padrão */
 }
 
-.icone-titulo-secao svg { /* Se você usar SVG inline */
-    width: 100%;
-    height: 100%;
-    stroke-width: 1.5; /* Para estilo outline Heroicons */
+.icone-titulo-secao svg {
+  /* Se você usar SVG inline */
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.5; /* Para estilo outline Heroicons */
 }
 
 /* Cores específicas por ícone de título (opcional) */
-.icone-dor { color: var(--color-alert-warning-icon-vendas); } /* Amarelo/Laranja para alerta/dor */
-.icone-solucao { color: var(--color-accent-green-medium-vendas); }
-.icone-valor { color: var(--color-water-blue-vendas); }
-.icone-prova-social { color: var(--color-text-secondary-vendas); }
-.icone-objecoes { color: var(--color-text-secondary-vendas); }
-.icone-oferta { color: var(--color-accent-green-vendas); }
-
+.icone-dor {
+  color: var(--color-alert-warning-icon-vendas);
+} /* Amarelo/Laranja para alerta/dor */
+.icone-solucao {
+  color: var(--color-accent-green-medium-vendas);
+}
+.icone-valor {
+  color: var(--color-water-blue-vendas);
+}
+.icone-prova-social {
+  color: var(--color-text-secondary-vendas);
+}
+.icone-objecoes {
+  color: var(--color-text-secondary-vendas);
+}
+.icone-oferta {
+  color: var(--color-accent-green-vendas);
+}
 
 /* Estilos para Ícone de Toggle no FAQ (revisado) */
 .faq-pergunta {
-    position: relative;
-    padding-right: var(--spacing-10); /* Mais espaço para o ícone no final */
+  position: relative;
+  padding-right: var(--spacing-10); /* Mais espaço para o ícone no final */
 }
 
 .faq-toggle-icon {
-    display: inline-flex; /* Usar flex para centralizar o SVG se necessário */
-    align-items: center;
-    justify-content: center;
-    width: var(--spacing-5); /* Aumentar um pouco */
-    height: var(--spacing-5);
-    color: var(--color-text-light-vendas);
-    position: absolute;
-    right: var(--spacing-4); /* Ajustar posição */
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.2s ease-in-out;
+  display: inline-flex; /* Usar flex para centralizar o SVG se necessário */
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-5); /* Aumentar um pouco */
+  height: var(--spacing-5);
+  color: var(--color-text-light-vendas);
+  position: absolute;
+  right: var(--spacing-4); /* Ajustar posição */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
 }
 
 .faq-toggle-icon svg {
-    width: 100%;
-    height: 100%;
-    stroke-width: 1.5; /* Ajustar para o ícone Heroicon (geralmente 1.5 ou 2) */
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.5; /* Ajustar para o ícone Heroicon (geralmente 1.5 ou 2) */
 }
 /* .faq-item.open .faq-toggle-icon { transform: translateY(-50%) rotate(180deg); } */ /* Para um chevron */
 
-
 .garantia-container {
-    text-align: center;
-    padding: var(--spacing-10);
-    background-color: var(--color-accent-green-light-bg-vendas);
-    border: 2px solid var(--color-accent-green-vendas); /* Borda sólida, não dashed */
-    border-radius: var(--radius-xl);
-    margin-top: var(--spacing-12);
+  text-align: center;
+  padding: var(--spacing-10);
+  background-color: var(--color-accent-green-light-bg-vendas);
+  border: 2px solid var(--color-accent-green-vendas); /* Borda sólida, não dashed */
+  border-radius: var(--radius-xl);
+  margin-top: var(--spacing-12);
 }
 .garantia-container .selo-garantia {
-    max-width: 100%;
-    width: 100px;
-    margin-bottom: var(--spacing-5);
-    opacity: 0.9;
+  max-width: 100%;
+  width: 100px;
+  margin-bottom: var(--spacing-5);
+  opacity: 0.9;
 }
 .garantia-container .titulo-garantia {
-    font-size: var(--font-size-2xl);
-    font-weight: 700; /* Bold */
-    margin-bottom: var(--spacing-3);
-    color: var(--color-accent-green-vendas);
+  font-size: var(--font-size-2xl);
+  font-weight: 700; /* Bold */
+  margin-bottom: var(--spacing-3);
+  color: var(--color-accent-green-vendas);
 }
 .garantia-container .texto-garantia {
-    font-size: var(--font-size-base);
+  font-size: var(--font-size-base);
 }
 
 /* --- Seção 7: Oferta Final e Escassez --- */
 #secao-oferta-final {
-    background-color: var(--color-slate-800);
-    color: var(--color-slate-200);
-    padding-top: var(--spacing-12);
-    padding-bottom: var(--spacing-16);
+  background-color: var(--color-slate-800);
+  color: var(--color-slate-200);
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-16);
 }
-#secao-oferta-final .vendas-secao__titulo{
-    color: var(--color-slate-50);
+#secao-oferta-final .vendas-secao__titulo {
+  color: var(--color-slate-50);
 }
 #secao-oferta-final .ancoragem-preco p,
 #secao-oferta-final .texto-acesso,
 #secao-oferta-final .preco-parcelado,
 #secao-oferta-final .escassez-container p {
-    color: var(--color-slate-200);
+  color: var(--color-slate-200);
 }
-.ancoragem-preco { text-align: center; margin-bottom: var(--spacing-8); }
-.ancoragem-preco p { font-size: var(--font-size-lg); margin-bottom: var(--spacing-2); }
-.ancoragem-preco .preco-cortado, .ancoragem-preco del {
-    text-decoration: line-through;
-    color: var(--color-slate-400);
-    font-size: 1.05em;
+.ancoragem-preco {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+.ancoragem-preco p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2);
+}
+.ancoragem-preco .preco-cortado,
+.ancoragem-preco del {
+  text-decoration: line-through;
+  color: var(--color-slate-400);
+  font-size: 1.05em;
 }
 .preco-final-container {
-    text-align: center;
-    margin-bottom: var(--spacing-8);
-    padding: var(--spacing-8);
-    background-color: var(--color-slate-700);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-8);
+  background-color: var(--color-slate-700);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
 }
 .preco-final-container .texto-acesso {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-3);
-    font-weight: 500; /* Medium */
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-3);
+  font-weight: 500; /* Medium */
 }
 .preco-final-container .preco {
-    font-size: var(--font-size-4xl); /* Maior */
-    font-weight: 800; /* ExtraBold */
-    color: var(--color-accent-green-price-darkbg); /* Verde mais claro para contraste */
-    margin-bottom: var(--spacing-1);
-    line-height: 1;
+  font-size: var(--font-size-4xl); /* Maior */
+  font-weight: 800; /* ExtraBold */
+  color: var(
+    --color-accent-green-price-darkbg
+  ); /* Verde mais claro para contraste */
+  margin-bottom: var(--spacing-1);
+  line-height: 1;
 }
 .preco-final-container .preco-parcelado {
-    font-size: var(--font-size-xl);
-    font-weight: 500; /* Medium */
+  font-size: var(--font-size-xl);
+  font-weight: 500; /* Medium */
 }
-.escassez-container { text-align: center; margin: var(--spacing-10) 0; }
-.escassez-container p strong { color: var(--color-slate-50); }
+.escassez-container {
+  text-align: center;
+  margin: var(--spacing-10) 0;
+}
+.escassez-container p strong {
+  color: var(--color-slate-50);
+}
 .contador-regressivo {
-    font-size: var(--font-size-3xl); /* Maior */
-    font-weight: 700; /* Bold */
-    color: var(--color-coral-cta-vendas); /* Usando a nova var do coral */
-    background-color: transparent;
-    padding: var(--spacing-3) var(--spacing-5);
-    border-radius: var(--radius-lg); /* Consistência */
-    display: inline-block;
-    margin: var(--spacing-4) 0 var(--spacing-6) 0;
-    border: 2px solid var(--color-coral-cta-vendas); /* Usando a nova var do coral */
-    min-width: 240px;
+  font-size: var(--font-size-3xl); /* Maior */
+  font-weight: 700; /* Bold */
+  color: var(--color-coral-cta-vendas); /* Usando a nova var do coral */
+  background-color: transparent;
+  padding: var(--spacing-3) var(--spacing-5);
+  border-radius: var(--radius-lg); /* Consistência */
+  display: inline-block;
+  margin: var(--spacing-4) 0 var(--spacing-6) 0;
+  border: 2px solid var(--color-coral-cta-vendas); /* Usando a nova var do coral */
+  min-width: 240px;
 }
 .texto-vagas-limitadas {
-    font-size: var(--font-size-base); /* Ajustado */
-    font-weight: 600; /* Semibold */
-    background-color: var(--color-alert-warning-icon-vendas); /* Usando o amber-500 (warning-icon) */
-    color: var(--color-text-primary-vendas);
-    padding: var(--spacing-2) var(--spacing-3);
-    border-radius: var(--radius-md);
-    display: inline-block;
+  font-size: var(--font-size-base); /* Ajustado */
+  font-weight: 600; /* Semibold */
+  background-color: var(
+    --color-alert-warning-icon-vendas
+  ); /* Usando o amber-500 (warning-icon) */
+  color: var(--color-text-primary-vendas);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  display: inline-block;
 }
-.logos-seguranca { text-align: center; margin-top: var(--spacing-10); }
+.logos-seguranca {
+  text-align: center;
+  margin-top: var(--spacing-10);
+}
 .logos-seguranca img {
-    height: 30px;
-    margin: 0 var(--spacing-2);
-    opacity: 0.8;
-    filter: brightness(0) invert(0.9); /* Ajuste para logos claros */
+  height: 30px;
+  margin: 0 var(--spacing-2);
+  opacity: 0.8;
+  filter: brightness(0) invert(0.9); /* Ajuste para logos claros */
 }
 
 /* --- Seção 8: Rodapé --- */
 .rodape-vendas {
-    text-align: center;
-    padding-top: var(--spacing-12);
-    padding-bottom: var(--spacing-10);
+  text-align: center;
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-10);
 }
-.autor-container { margin-bottom: var(--spacing-10); }
+.autor-container {
+  margin-bottom: var(--spacing-10);
+}
 .autor-container .foto-autor {
-    width: 100px; /* Menor */
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: var(--spacing-4);
-    box-shadow: var(--shadow-lg);
-    border: 3px solid var(--color-surface-vendas);
+  width: 100px; /* Menor */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--spacing-4);
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--color-surface-vendas);
 }
 .autor-container .nome-autor {
-    font-size: var(--font-size-lg);
-    font-weight: 600; /* Semibold */
-    color: var(--color-text-primary-vendas);
-    margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-lg);
+  font-weight: 600; /* Semibold */
+  color: var(--color-text-primary-vendas);
+  margin-bottom: var(--spacing-1);
 }
 .autor-container .bio-autor {
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary-vendas);
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary-vendas);
 }
 .post-scriptum {
-    font-size: var(--font-size-lg);
-    font-style: normal; /* Não itálico para PS */
-    max-width: 700px;
-    margin: var(--spacing-10) auto 0 auto;
-    padding: var(--spacing-6);
-    background-color: var(--color-surface-vendas);
-    border-top: 2px solid var(--color-accent-green-vendas);
-    border-bottom: 2px solid var(--color-accent-green-vendas);
-    border-radius: var(--radius-lg);
+  font-size: var(--font-size-lg);
+  font-style: normal; /* Não itálico para PS */
+  max-width: 700px;
+  margin: var(--spacing-10) auto 0 auto;
+  padding: var(--spacing-6);
+  background-color: var(--color-surface-vendas);
+  border-top: 2px solid var(--color-accent-green-vendas);
+  border-bottom: 2px solid var(--color-accent-green-vendas);
+  border-radius: var(--radius-lg);
 }
 .rodape-vendas .copyright {
-    font-size: var(--font-size-sm);
-    margin-top: var(--spacing-10);
-    color: var(--color-text-light-vendas);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-10);
+  color: var(--color-text-light-vendas);
 }
 
 /* Links Globais */
 a {
-    color: var(--color-accent-green-vendas);
-    text-decoration: none;
-    font-weight: 500; /* Medium */
-    transition: color 0.15s ease-in-out;
+  color: var(--color-accent-green-vendas);
+  text-decoration: none;
+  font-weight: 500; /* Medium */
+  transition: color 0.15s ease-in-out;
 }
 a:hover {
-    color: var(--color-accent-green-hover-vendas);
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Responsividade Geral */
 @media (max-width: 768px) {
-    .vendas-secao { padding: var(--spacing-12) 0; }
-    .vendas-secao__titulo { font-size: var(--font-size-2xl); margin-bottom: var(--spacing-8); }
-    #secao-alerta .titulo-principal { font-size: var(--font-size-3xl); }
+  .vendas-secao {
+    padding: var(--spacing-12) 0;
+  }
+  .vendas-secao__titulo {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-8);
+  }
+  #secao-alerta .titulo-principal {
+    font-size: var(--font-size-3xl);
+  }
 
-    /* Ajuste para blocos de texto em telas menores */
-    .vendas-secao__subtitulo,
-    .apresentacao-ebook .descricao-principal,
-    .conexao-emocional,
-    .faq-resposta,
-    .garantia-container .texto-garantia,
-    .ancoragem-preco p,
-    .autor-container .bio-autor,
-    .post-scriptum p {
-        font-size: var(--font-size-base);
-        max-width: 95%;
-    }
+  /* Ajuste para blocos de texto em telas menores */
+  .vendas-secao__subtitulo,
+  .apresentacao-ebook .descricao-principal,
+  .conexao-emocional,
+  .faq-resposta,
+  .garantia-container .texto-garantia,
+  .ancoragem-preco p,
+  .autor-container .bio-autor,
+  .post-scriptum p {
+    font-size: var(--font-size-base);
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 480px) {
-    .vendas-container { padding: 0 var(--spacing-3); }
-    .vendas-secao { padding: var(--spacing-10) 0; }
-    .vendas-secao__titulo { font-size: var(--font-size-xl); margin-bottom: var(--spacing-6); }
-    #secao-alerta .titulo-principal { font-size: var(--font-size-2xl); }
+  .vendas-container {
+    padding: 0 var(--spacing-3);
+  }
+  .vendas-secao {
+    padding: var(--spacing-10) 0;
+  }
+  .vendas-secao__titulo {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-6);
+  }
+  #secao-alerta .titulo-principal {
+    font-size: var(--font-size-2xl);
+  }
 
-    .btn-cta-vendas {
-        padding: var(--spacing-3) var(--spacing-5);
-        font-size: var(--font-size-base); /* Um pouco maior para toque */
-    }
-    .preco-final-container .preco { font-size: var(--font-size-3xl); }
-    .contador-regressivo { font-size: var(--font-size-2xl); padding: var(--spacing-2) var(--spacing-4); }
+  .btn-cta-vendas {
+    padding: var(--spacing-3) var(--spacing-5);
+    font-size: var(--font-size-base); /* Um pouco maior para toque */
+  }
+  .preco-final-container .preco {
+    font-size: var(--font-size-3xl);
+  }
+  .contador-regressivo {
+    font-size: var(--font-size-2xl);
+    padding: var(--spacing-2) var(--spacing-4);
+  }
 
-    .lista-beneficios-ebook, .depoimentos-grid { grid-template-columns: 1fr; gap: var(--spacing-4); }
-    .logos-seguranca img { height: 26px; margin: 0 var(--spacing-1) var(--spacing-2) 0; }
-    .autor-container .foto-autor { width: 80px; height: 80px; }
+  .lista-beneficios-ebook,
+  .depoimentos-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  .logos-seguranca img {
+    height: 26px;
+    margin: 0 var(--spacing-1) var(--spacing-2) 0;
+  }
+  .autor-container .foto-autor {
+    width: 80px;
+    height: 80px;
+  }
 }
