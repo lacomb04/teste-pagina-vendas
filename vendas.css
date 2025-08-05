@@ -399,40 +399,46 @@ li {
   display: flex;
   flex-direction: column;
 }
-.depoimento-item .depoimento-imagem {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: var(--radius-lg); /* Consistência */
+.depoimento-header {
+  display: flex;
+  align-items: center;
   margin-bottom: var(--spacing-4);
 }
-.depoimento-item .depoimento-texto {
-  font-style: italic;
-  margin-bottom: var(--spacing-5);
-  flex-grow: 1;
+
+.depoimento-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: var(--spacing-4);
+  object-fit: cover;
+  border: 2px solid var(--color-border-subtle-vendas);
+}
+
+.depoimento-autor {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.depoimento-autor strong {
+  font-weight: 600; /* Semibold */
+  color: var(--color-text-primary-vendas);
   font-size: var(--font-size-base);
-  color: var(--color-text-secondary-vendas);
 }
-.depoimento-item .depoimento-texto::before {
-  content: "“";
-  font-size: 3em; /* Aspas maiores e mais estilizadas */
-  color: var(--color-accent-green-vendas);
-  float: left;
-  margin-right: var(--spacing-1);
-  line-height: 0.7;
-  font-weight: 600;
-}
-.depoimento-item .depoimento-autor {
-  font-weight: 500; /* Medium */
-  text-align: right;
+
+.depoimento-autor span {
   font-size: var(--font-size-sm);
   color: var(--color-text-light-vendas);
 }
-.depoimento-item .depoimento-autor strong {
-  display: block;
+
+.depoimento-item .depoimento-texto {
+  font-style: italic;
+  margin-bottom: 0; /* No margin bottom as header provides space */
+  flex-grow: 1;
   font-size: var(--font-size-base);
-  color: var(--color-accent-green-vendas);
-  font-weight: 600; /* Semibold */
+  color: var(--color-text-secondary-vendas);
+  padding-left: 1em;
+  border-left: 3px solid var(--color-accent-green-light-bg-vendas);
 }
 
 /* --- Seção 6: Objeções e Garantia --- */
