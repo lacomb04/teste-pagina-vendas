@@ -139,10 +139,7 @@ let totalScore = 0;
 let isTransitioning = false;
 
 // DOM Elements
-const heroSection = document.getElementById('hero-section');
 const quizSection = document.getElementById('quiz-section');
-const resultSection = document.getElementById('result-section');
-const startQuizBtn = document.getElementById('start-quiz-btn');
 const progressFill = document.getElementById('progress-fill');
 const progressText = document.getElementById('progress-text');
 const progressPercentage = document.querySelector('.progress-percentage');
@@ -151,7 +148,6 @@ const questionOptions = document.getElementById('question-options');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const questionCard = document.getElementById('question-card');
-const ctaButton = document.getElementById('cta-button');
 
 // Initialize Application
 document.addEventListener('DOMContentLoaded', function() {
@@ -161,20 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Preload background images
     preloadImages();
+    // Start the quiz automatically
+    displayQuestion();
 });
 
 function initializeEventListeners() {
-    startQuizBtn.addEventListener('click', startQuiz);
     prevBtn.addEventListener('click', previousQuestion);
     nextBtn.addEventListener('click', nextQuestion);
     
     // Add keyboard navigation
     document.addEventListener('keydown', handleKeyboardNavigation);
-    
-    // Add CTA tracking
-    if (ctaButton) {
-        ctaButton.addEventListener('click', trackCTAClick);
-    }
 }
 
 function preloadImages() {
@@ -188,43 +180,6 @@ function preloadImages() {
         const img = new Image();
         img.src = src;
     });
-}
-
-function startQuiz() {
-    if (isTransitioning) return;
-    
-    isTransitioning = true;
-    
-    // Add loading state
-    startQuizBtn.innerHTML = '<span>Carregando...</span>';
-    startQuizBtn.disabled = true;
-    
-    // Animate hero section out
-    heroSection.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-    heroSection.style.opacity = '0';
-    heroSection.style.transform = 'translateY(-50px)';
-    
-    setTimeout(() => {
-        heroSection.classList.add('hidden');
-        quizSection.classList.remove('hidden');
-        
-        // Reset and show quiz section
-        quizSection.style.opacity = '0';
-        quizSection.style.transform = 'translateY(50px)';
-        
-        // Force reflow
-        quizSection.offsetHeight;
-        
-        setTimeout(() => {
-            quizSection.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            quizSection.style.opacity = '1';
-            quizSection.style.transform = 'translateY(0)';
-            
-            // Initialize first question
-            displayQuestion();
-            isTransitioning = false;
-        }, 50);
-    }, 300);
 }
 
 function displayQuestion() {
@@ -448,9 +403,6 @@ function finishQuiz() {
     if (isTransitioning) return;
     
     isTransitioning = true;
-    
-    // Calculate total score
-    totalScore = answers.reduce((sum, answer) => sum + answer.points, 0);
     
     // Calculate total score
     totalScore = answers.reduce((sum, answer) => sum + answer.points, 0);
